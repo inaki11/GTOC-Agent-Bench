@@ -1,3 +1,91 @@
+# Notas Setup iñaki
+
+###Intalar docker wsl:
+
+```console
+sudo apt-get update
+sudo apt-get install ca-certificates curl
+sudo install -m 0755 -d /etc/apt/keyrings
+sudo curl -fsSL https://download.docker.com/linux/ubuntu/gpg -o /etc/apt/keyrings/docker.asc
+sudo chmod a+r /etc/apt/keyrings/docker.asc
+
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+```
+
+###Instalar sysbox:
+```console
+sudo wget https://downloads.nestybox.com/sysbox/releases/v0.6.6/sysbox-ce_0.6.6-0.linux_amd64.deb
+
+sudo apt-get install jq
+sudo apt-get install ./sysbox-ce_0.6.6-0.linux_amd64.deb
+```
+
+###Instalar git-lfs:
+```console
+sudo apt-get install git-lfs
+```
+
+###Ahora hacemos desde wsl dentro de nuestro directorio windows:
+```console
+sudo git lfs fetch --all
+sudo git lfs pull
+```
+
+###Actualizamos python a 3.11
+```console
+sudo apt install python3.11 -y
+```
+
+###cambiamos el alias de python3 al nuevo python
+```console
+sudo ln -sf /usr/bin/python3.11 /usr/bin/python3
+
+sudo apt install python3-pip
+python3 -m pip install --upgrade pip setuptools
+pip install -e .
+```
+###Cargamos datos de competiciones. 
+En mi caso solo spaceship-titanic
+En el dir home de wsl creamos el directorio **/.config/.kaggle**
+Dentro metemos un json con la key del usuario de kaggle. Se descarga en profile settings
+
+en el directiorio del repo:
+```console
+mlebench prepare -c spaceship-titanic
+```
+Pedirá aceptar unirse a la competición en el navegador
+
+
+# Run AIDE Agent Iñaki
+
+Build 
+
+```console
+ sudo docker build --platform=linux/amd64 -t mlebench-env -f environment/Dockerfile .
+```
+
+```console
+export SUBMISSION_DIR=/home/submission
+export LOGS_DIR=/home/logs
+export CODE_DIR=/home/code
+export AGENT_DIR=/home/agent
+
+sudo docker build --platform=linux/amd64 -t aide agents/aide/ --build-arg SUBMISSION_DIR=$SUBMISSION_DIR --build-arg LOGS_DIR=$LOGS_DIR --build-arg CODE_DIR=$CODE_DIR --build-arg AGENT_DIR=$AGENT_DIR
+```
+
+Run
+```console
+python run_agent.py --agent-id aide --competition-set experiments/splits/spaceship-titanic.txt
+```
+
+# Add the repository to Apt sources:
+echo \
+  "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
+  $(. /etc/os-release && echo "${UBUNTU_CODENAME:-$VERSION_CODENAME}") stable" | \
+  sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+sudo apt-get update
+
+
 # MLE-bench
 
 Code for the paper ["MLE-Bench: Evaluating Machine Learning Agents on Machine Learning Engineering"](https://arxiv.org/abs/2410.07095). We have released the code used to construct the dataset, the evaluation logic, as well as the agents we evaluated for this benchmark.
