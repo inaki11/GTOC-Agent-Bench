@@ -1,0 +1,16 @@
+id: gtoc-upm
+name: The Problem of the 12th Global Trajectory Optimisation Competition
+competition_type: simple
+awards_medals: false
+prizes: null
+description: mlebench/competitions/gtoc-upm/description.md
+
+dataset:
+  answers: gtoc/prepared/private/test.csv
+  sample_submission: gtoc/prepared/public/sample_submission.csv
+
+grader:
+  name: accuracy
+  grade_fn: mlebench.competitions.gtoc-upm.grade:grade
+
+preparer: mlebench.competitions.gtoc-upm.prepare:prepare
