@@ -19,6 +19,10 @@ from mlebench.data import is_dataset_prepared
 from mlebench.registry import Competition, registry
 from mlebench.utils import create_run_dir, get_logger, get_runs_dir, get_timestamp
 
+from dotenv import load_dotenv
+
+load_dotenv()
+
 logger = get_logger(__name__)
 
 

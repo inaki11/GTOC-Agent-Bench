@@ -26,6 +26,7 @@ RUN apt-get update && apt-get install -y \
     ffmpeg \
     libsm6 \
     libxext6 \
+	dos2unix \
     && pip install jupyter \
     && rm -rf /var/lib/apt/lists/* # removes cache
 
@@ -75,6 +76,8 @@ COPY environment/instructions_obfuscated.txt /home/instructions_obfuscated.txt
 COPY environment/validate_submission.sh /home/validate_submission.sh
 COPY environment/entrypoint.sh /entrypoint.sh
 
+# convierto saltos de liena a linux
+RUN dos2unix /entrypoint.sh
 # Create nonroot user; make entrypoint executable
 RUN useradd -m nonroot \
     && mkdir /home/submission \
