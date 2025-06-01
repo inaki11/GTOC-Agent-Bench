@@ -101,25 +101,42 @@ def validate_submission(submission: Path, competition: Competition) -> tuple[boo
     This is designed for end users, not developers (we assume that the competition grader is
     correctly implemented and use that for validating the submission, not the other way around).
     """
+    print(f"Validating submission using competition grader: {competition.id}.  currently in /mlebench/grade.py")
+
     if not submission.is_file():
         return False, f"Submission invalid! Submission file {submission} does not exist."
 
-    if not submission.suffix.lower() == ".csv":
-        return False, "Submission invalid! Submission file must be a CSV file."
+    if competition.id == "gtoc-upm":
+        if not submission.suffix.lower() == ".txt":
+            return False, "Submission invalid! Submission file must be a txt file."
 
-    if not is_dataset_prepared(competition, grading_only=True):
-        raise ValueError(
-            f"Dataset for competition `{competition.id}` is not prepared! "
-            f"Please run `mlebench prepare -c {competition.id}` to prepare the dataset."
-        )
+        try:
+            points = competition.grader.grade_fn(submission)
+        except Exception as e:
+            return (
+                False,
+                f"Submission invalid! The attempt to grade the submission has resulted in the following error message:\n{e}",
+            )
+        return True, f"Submission is valid! Points obtained: {points}"
+    
 
-    try:
-        competition.grader.grade_fn(read_csv(submission), read_csv(competition.answers))
-    except Exception as e:
-        return (
-            False,
-            f"Submission invalid! The attempt to grade the submission has resulted in the following error message:\n{e}",
-        )
+    else:
+        if not submission.suffix.lower() == ".csv":
+            return False, "Submission invalid! Submission file must be a CSV file."
+
+        if not is_dataset_prepared(competition, grading_only=True):
+            raise ValueError(
+                f"Dataset for competition `{competition.id}` is not prepared! "
+                f"Please run `mlebench prepare -c {competition.id}` to prepare the dataset."
+            )
+
+        try:
+            competition.grader.grade_fn(read_csv(submission), read_csv(competition.answers))
+        except Exception as e:
+            return (
+                False,
+                f"Submission invalid! The attempt to grade the submission has resulted in the following error message:\n{e}",
+            )
 
     return True, "Submission is valid."
 
