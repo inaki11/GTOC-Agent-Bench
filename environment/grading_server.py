@@ -13,6 +13,7 @@ COMPETITION_ID = os.getenv("COMPETITION_ID")  # This is populated for us at cont
 
 
 def run_validation(submission: Path) -> str:
+    print(f"Validating submission: (enviroment/grading_server.py)")
     new_registry = registry.set_data_dir(Path(PRIVATE_DATA_DIR))
     competition = new_registry.get_competition(COMPETITION_ID)
     is_valid, message = validate_submission(submission, competition)
