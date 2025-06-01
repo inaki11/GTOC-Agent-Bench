@@ -55,6 +55,11 @@ mlebench prepare -c spaceship-titanic
 ```
 Pedirá aceptar unirse a la competición en el navegador
 
+en el caso de querer evaluar gtoc-upm:
+```console
+mlebench prepare -c gtoc-upm
+```
+En caso de tener problemas con los checksums añadir " --overwrite-checks "
 
 # Run AIDE Agent Iñaki
 
