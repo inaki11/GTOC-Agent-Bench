@@ -1,6 +1,6 @@
 # Notas Setup iñaki
 
-###Intalar docker wsl:
+### Intalar docker wsl:
 
 ```console
 sudo apt-get update
@@ -12,7 +12,7 @@ sudo chmod a+r /etc/apt/keyrings/docker.asc
 sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
 ```
 
-###Instalar sysbox:
+### Instalar sysbox:
 ```console
 sudo wget https://downloads.nestybox.com/sysbox/releases/v0.6.6/sysbox-ce_0.6.6-0.linux_amd64.deb
 
@@ -20,23 +20,23 @@ sudo apt-get install jq
 sudo apt-get install ./sysbox-ce_0.6.6-0.linux_amd64.deb
 ```
 
-###Instalar git-lfs:
+### Instalar git-lfs:
 ```console
 sudo apt-get install git-lfs
 ```
 
-###Ahora hacemos desde wsl dentro de nuestro directorio windows:
+### Ahora hacemos desde wsl dentro de nuestro directorio windows:
 ```console
 sudo git lfs fetch --all
 sudo git lfs pull
 ```
 
-###Actualizamos python a 3.11
+### Actualizamos python a 3.11
 ```console
 sudo apt install python3.11 -y
 ```
 
-###cambiamos el alias de python3 al nuevo python
+### cambiamos el alias de python3 al nuevo python
 ```console
 sudo ln -sf /usr/bin/python3.11 /usr/bin/python3
 
@@ -44,7 +44,7 @@ sudo apt install python3-pip
 python3 -m pip install --upgrade pip setuptools
 pip install -e .
 ```
-###Cargamos datos de competiciones. 
+### Cargamos datos de competiciones. 
 En mi caso solo spaceship-titanic
 En el dir home de wsl creamos el directorio **/.config/.kaggle**
 Dentro metemos un json con la key del usuario de kaggle. Se descarga en profile settings
@@ -61,7 +61,7 @@ Pedirá aceptar unirse a la competición en el navegador
 Build 
 
 ```console
- sudo docker build --platform=linux/amd64 -t mlebench-env -f environment/Dockerfile .
+docker build --platform=linux/amd64 -t mlebench-env -f environment/Dockerfile .
 ```
 
 ```console
@@ -70,13 +70,30 @@ export LOGS_DIR=/home/logs
 export CODE_DIR=/home/code
 export AGENT_DIR=/home/agent
 
-sudo docker build --platform=linux/amd64 -t aide agents/aide/ --build-arg SUBMISSION_DIR=$SUBMISSION_DIR --build-arg LOGS_DIR=$LOGS_DIR --build-arg CODE_DIR=$CODE_DIR --build-arg AGENT_DIR=$AGENT_DIR
+docker build --platform=linux/amd64 -t aide agents/aide/ --build-arg SUBMISSION_DIR=$SUBMISSION_DIR --build-arg LOGS_DIR=$LOGS_DIR --build-arg CODE_DIR=$CODE_DIR --build-arg AGENT_DIR=$AGENT_DIR
 ```
+
 
 Run
 ```console
-python run_agent.py --agent-id aide --competition-set experiments/splits/spaceship-titanic.txt
+python3 run_agent.py --agent-id aide --competition-set experiments/splits/spaceship-titanic.txt
 ```
+
+### Debug run
+Run with retain flag so container is not removed
+```console
+python3 run_agent.py --agent-id aide --competition-set experiments/splits/spaceship-titanic.txt --retain
+```
+
+Search docker ps id
+```console
+docker ps -a
+```
+
+```console
+docker logs <ID>
+```
+
 
 # Add the repository to Apt sources:
 echo \
