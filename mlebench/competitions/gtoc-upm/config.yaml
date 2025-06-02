@@ -6,11 +6,11 @@ prizes: null
 description: mlebench/competitions/gtoc-upm/description.md
 
 dataset:
-  answers: gtoc/prepared/private/test.csv
-  sample_submission: gtoc/prepared/public/sample_submission.csv
+  answers: gtoc-upm/prepared/public/GTOC12_Asteroids_Data.txt # dummy para evitar que detecte el dataset como no preparado
+  sample_submission: gtoc-upm/prepared/public/GTOC12_Asteroids_Data.txt # dummy para evitar que detecte el dataset como no preparado
 
 grader:
   name: accuracy
-  grade_fn: mlebench.competitions.gtoc-upm.grade:grade
+  grade_fn: mlebench.competitions.gtoc-upm.GTOC12_Verify.grade:grade
 
 preparer: mlebench.competitions.gtoc-upm.prepare:prepare

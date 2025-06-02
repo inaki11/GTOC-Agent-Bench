@@ -61,6 +61,7 @@ mlebench prepare -c gtoc-upm
 ```
 En caso de tener problemas con los checksums añadir " --overwrite-checks "
 
+los datos preparados se guardarán en " ~/.cache/mle-bench/data/gtoc-upm/prepared/ "
 # Run AIDE Agent Iñaki
 
 Build 
