@@ -33,102 +33,46 @@ Line q           │ 2  0      t   rₓ  rᵧ  r_z   vₓ  vᵧ  v_z   m
 Line q + 1       │ 2  0      t   rₓ  rᵧ  r_z   vₓ  vᵧ  v_z   m
 ⋮                │ ⋮
 ──────────────────────────────────────────────────────────────────────────────
-*  Asterisco indica la primera línea de una maniobra Δv.  
-†  Daga (†) indica un evento discreto especial (p. ej. encendido de motor).
+* event ID −2, −3, or −4 for planetary flybys
+† event ID from 1 to 60,000 for asteroid rendezvous
 
-1. Estructura general del archivo
-Cada línea contiene 10 campos numéricos separados por espacios:
-
-php-template
-Copiar
-Editar
-<ship_id> <event_id> <t> <rx> <ry> <rz> <vx> <vy> <vz> <m>
-<ship_id> — entero positivo (1 … N).
-
-<event_id> — entero que identifica el tipo de evento (tabla más abajo).
-
-<t> — época juliana [días].
-
-(rx, ry, rz) — posición heliocéntrica [km].
-
-(vx, vy, vz) — velocidad heliocéntrica [km/s].
-
-<m> — masa de la nave [kg].
-
-El archivo se divide en N secciones, una por nave, donde los ship_id aparecen en orden creciente.
-Las líneas con la misma época representan eventos simultáneos.
-
-2. Significado de event_id
-event_id	Evento	Nº de líneas	Comentarios breves
-0	Launch desde la Tierra	2	Mismas t, r, m; cambian v (Tierra → nave)
-−1	Burning arc (maniobra Δv)	≥ 4	Ver reglas especiales ⇣
-−2	Flyby de Venus	2	Mismas t, r; v cumple restricciones de GA
-−3	Flyby de la Tierra	2	Δm = masa de recursos descargados
-−4	Flyby de Marte	2	
-≥ 1 000…	ID de asteroide	2	Rendezvous: cambia m (descarga o recoge recursos)
-
-(Ajusta el rango de IDs de asteroides según tu base de datos).
-
-3. Reglas específicas por tipo de evento
-3.1. Burning arcs (event_id = -1)
-Inicio y fin
-
-Primera y última línea: vector de empuje nulo (Tx Ty Tz) = (0 0 0).
-
-Líneas intermedias
-
-Segunda y penúltima: misma época que sus respectivas adyacentes, empuje ≠ 0.
-
-Resto: distribuidas cada 1 día exactamente.
-
-Se permite un último incremento parcial (< 1 día) entre la antepenúltima y las dos últimas líneas.
-
-Propagación interna
-
-El verificador interpolará el empuje con un polinomio de Lagrange de grado 3.
-
-Plantilla mínima (4 líneas):
-
-bash
-Copiar
-Editar
-id -1 t₀ rx ry rz vx vy vz m          0 0 0
-id -1 t₀ rx ry rz vx vy vz m          Tx Ty Tz   # mismo t₀, Tx≠0
-…  (n−3 líneas con Δt = 1 día) …
-id -1 t_f rx ry rz vx vy vz m         Tx Ty Tz   # penúltima, Tx≠0
-id -1 t_f rx ry rz vx vy vz m         0  0  0    # última, mismo t_f
-3.2. Eventos de 2 líneas (event_id = 0, -2, -3, -4 o asteroide)
-Launch (0)
-
-bash
-Copiar
-Editar
-id 0 t r v_Earth m   # heliocéntrica de la Tierra
-id 0 t r v_ship  m   # misma t, r, m; solo cambia v
-Rendezvous (asteroide)
-
-Misma t, r, v; cambia m (carga/descarga).
-
-Flyby (−2, −3, −4)
-
-Misma t, r; v antes/después cumple la mecánica GA.
-
-En Earth flyby (−3) la diferencia de masas = masa entregada.
-
-4. Plantilla completa por sección (lista de eventos)
-txt
-Copiar
-Editar
-# -------- Ship <ship_id = 1> --------
-1 0      t0 r_E x y z v_E x y z m0          # Launch (2 líneas)
-1 0      t0 r_E x y z v_S x y z m0
-1 -1     …                                   # Burning arc (≥4 líneas)
-1 -2     …                                   # Venus flyby (2 líneas)
-1 12345  …                                   # Rendezvous con asteroide 12345 (2 líneas)
-…
-# -------- Ship <ship_id = 2> --------
-2 0      t0 r_E x y z v_E x y z m0          # Nuevo launch
-2 0      t0 r_E x y z v_S x y z m0
+The solution file must be an ASCII text file, and the format is defined in Data section of Table 1.
+Each line of the file has the following format: two integers followed by several floating point numbers.
+The numbers must be separated by spaces.
+The file can be divided into N sections according to the ship ID (the first integer of each line
+increased from 1 to N). The first section and the beginning of the second section are shown in Table 1
+as an example. Each section lists the events of launch from the Earth, burning arcs, rendezvous, and
+flybys, which are indicated by the event ID (the second integer of each line) in order of epochs (the
+first floating point number of each line). The second integer at the first line of each section is 0,
+indicating that this ship is leaving the Earth at its initial time. The second integer −1 represents burning
+arcs, −2 Venus flyby, −3 Earth flyby, −4 Mars flyby, and an asteroid ID represents rendezvous with this
+asteroid. Multiple lines with the same epochs are used to represents the events that occur at the same
+time. There are two types of formats for floating point numbers, depending on the events:
+a. Event ID = −1
+At the moment the thruster is switched either from shutdown to burning or vice versa, two
+lines must be listed with the same epochs but different thrusts. A burning arc is presented by
+starting with a line and ending with a line both with a zero thrust vector, and by evenly
+distributing lines with thrust components between the boundary lines. So, the second and
+penultimate lines have the same epochs with the first and last lines, respectively, but the thrust
+vectors are both nonzero. There is no need to provide data for coast arcs. The time interval
+between two successive lines in the burning arc has to be one day, and a partial-day increment
+from the antepenultimate line to the last two lines is permitted. Note that, when the solution
+is verified, the state and mass of each Mining Ship will be propagated by numerically
+integrating the differential equations of the state and the mass, of which the thrust will be
+approximated by a third Lagrange interpolating polynomial.
+b. Event ID = 0, −2, −3, −4 or asteroid ID
+The events of launches, rendezvous, and flybys are all represented by two lines consisting of
+the values of epochs, positions, velocities, and masses immediately before and after the events.
+The two lines corresponding to launch should be listed with the same epochs, positions, and
+masses, but with different velocities, of which the first one is the heliocentric velocity of the
+Earth, and the second one is the heliocentric velocity of the Mining Ship. The two lines
+corresponding to rendezvous should be listed with the same epochs, positions, and velocities,
+but with different masses as the ship unloads a miner or retrieves resources. The two lines
+corresponding to planetary flyby should be listed with the same epochs and positions, with
+the two heliocentric velocities of the Mining Ship satisfying the GA constraints, and with the
+mass difference for Earth flyby being equal to the mass of resources unloaded on the Earth.
+The errors in position, velocity, and mass will be evaluated by propagating the state and mass
+of the Mining Ship between two successive events (event IDs 0, −2, −3, −4 or asteroid ID).
 
 - **Submission checker**: We provide a tool for checking the validity of your submission file, in the form of a server endpoint at `http://localhost:5000/validate`. If you post a submission file to the server (e.g. `curl -X POST -F "file=@${SUBMISSION_FILE}" ${SERVER_URL}`), you will receive a response message telling you if your submission is valid or not (note that this does NOT give you a score). For your convenience, we provide a script `/home/validate_submission.sh` which can help you make this submission to the validation server.
 
