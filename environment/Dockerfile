@@ -94,6 +94,7 @@ COPY environment/entrypoint.sh /entrypoint.sh
 
 # convierto saltos de liena a linux
 RUN dos2unix /entrypoint.sh
+RUN dos2unix /mlebench/agents/aide/start.sh
 # Create nonroot user; make entrypoint executable
 RUN useradd -m nonroot \
     && mkdir /home/submission \

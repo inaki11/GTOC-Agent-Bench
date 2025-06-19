@@ -30,3 +30,5 @@ RUN conda run -n ${CONDA_ENV_NAME} pip install -r ${AGENT_DIR}/requirements.txt 
 
 # put all the agent files in the expected location
 COPY . ${AGENT_DIR}
+
+RUN dos2unix ${AGENT_DIR}/start.sh
