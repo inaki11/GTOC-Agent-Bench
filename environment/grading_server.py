@@ -23,7 +23,7 @@ def run_validation(submission: Path) -> str:
 @app.route("/validate", methods=["POST"])
 def validate():
     submission_file = request.files["file"]
-    submission_path = Path("/tmp/submission_to_validate.csv")
+    submission_path = Path("/tmp/submission_to_validate.txt")
     submission_file.save(submission_path)
 
     try:

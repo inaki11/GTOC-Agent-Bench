@@ -101,14 +101,14 @@ def validate_submission(submission: Path, competition: Competition) -> tuple[boo
     This is designed for end users, not developers (we assume that the competition grader is
     correctly implemented and use that for validating the submission, not the other way around).
     """
-    print(f"Validating submission using competition grader: {competition.id}.  currently in /mlebench/grade.py")
+    logger.info(f"Validating submission using competition grader: {competition.id}.  currently in /mlebench/grade.py")
 
     if not submission.is_file():
         return False, f"Submission invalid! Submission file {submission} does not exist."
 
     if competition.id == "gtoc-upm":
         if not submission.suffix.lower() == ".txt":
-            return False, "Submission invalid! Submission file must be a txt file."
+            return False, f"Submission invalid! Submission file must be a txt file. \n parametro submission: {submission}  sufix: {submission.suffix.lower()}"
 
         try:
             points = competition.grader.grade_fn(submission)
@@ -117,7 +117,7 @@ def validate_submission(submission: Path, competition: Competition) -> tuple[boo
                 False,
                 f"Submission invalid! The attempt to grade the submission has resulted in the following error message:\n{e}",
             )
-        return True, f"Submission is valid! Points obtained: {points}"
+        return True, f"Submission grading result: {points}"
     
 
     else:
