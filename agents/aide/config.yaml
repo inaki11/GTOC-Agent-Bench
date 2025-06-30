@@ -11,7 +11,7 @@ defaults: &defaults
     STEP_LIMIT: *step_count
 
 kwargs_common: &kwargs_common
-  agent.search.max_debug_depth: 15 # debug down a branch for up to 20 steps
+  agent.search.max_debug_depth: 20 # debug down a branch for up to 20 steps
   agent.search.debug_prob: 1 # always debug when there's something to debug
   agent.time_limit: *time_limit
   exec.timeout: 360 # 9 hours limit _per step_, to match max of kaggle.com
@@ -21,8 +21,8 @@ aide:
   <<: *defaults
   kwargs:
     <<: *kwargs_common
-    agent.code.model: gpt-4.1-nano-2025-04-14
-    agent.feedback.model: gpt-4.1-nano-2025-04-14
+    agent.code.model: gpt-4.1-mini-2025-04-14
+    agent.feedback.model: gpt-4.1-mini-2025-04-14
     agent.steps: *step_count
   env_vars:
     <<: *env_vars
