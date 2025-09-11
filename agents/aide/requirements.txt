@@ -1,1 +1,1 @@
-git+https://github.com/pablo-exe/aideml.git
+git+https://github.com/inaki11/aide-gtoc.git
