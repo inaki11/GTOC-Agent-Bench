@@ -1,1 +1,1 @@
-git+https://github.com/inaki11/GTOC-Agent-Bench.git
+git+https://github.com/inaki11/aide-gtoc.git
