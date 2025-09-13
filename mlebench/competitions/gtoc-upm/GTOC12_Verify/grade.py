@@ -75,6 +75,15 @@ def grade(submission_path):
         print(f"DEBUG: Error copying file: {e}")
         raise e
     
+    # print the content of Result.txt for debugging
+    try:
+        with open(result_file, 'r') as f:
+            content = f.read()
+            print(f"DEBUG: Content of Result.txt:\n{content}")
+    except Exception as e:
+        print(f"DEBUG: Error reading Result.txt: {e}")
+        raise e
+
     print(f"DEBUG: About to run GTOC12_Verify...")
     try:
         result = subprocess.run(
