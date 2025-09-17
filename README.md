@@ -110,19 +110,24 @@ En WSL2, donde ejecuto el contenerdo docker, levantamos ollama, abriendo las pet
 ```console
 OLLAMA_HOST=0.0.0.0 ollama serve
 ```
-
 Ver si ollama está sirviendo, y ver si recibe peticiones de la red o solo loclahost
 ```console
 ss -ltnp | grep 11434
 ```
-
 kill ollama server
 ```console
 sudo systemctl stop ollama
 ```
+comprobar desde shell del contenedor conexión con servidor
+```console
+curl http://10.255.255.254:11434/api/tags
 
-sudo systemctl stop ollama
-
+curl http://host.docker.internal:11434/api/tags
+```
+Averiguar puerto wsl
+```console
+cat /etc/resolv.conf | grep nameserver
+```
 
 # Add the repository to Apt sources:
 echo \
