@@ -103,6 +103,32 @@ docker logs <ID>
 ```
 
 
+# Run local LLM server
+
+## Ollama
+En WSL2, donde ejecuto el contenerdo docker, levantamos ollama, abriendo las peticiones a cualquier procedencia para que acepte las peticiones del docker
+```console
+OLLAMA_HOST=0.0.0.0 ollama serve
+```
+Ver si ollama está sirviendo, y ver si recibe peticiones de la red o solo loclahost
+```console
+ss -ltnp | grep 11434
+```
+kill ollama server
+```console
+sudo systemctl stop ollama
+```
+comprobar desde shell del contenedor conexión con servidor
+```console
+curl http://10.255.255.254:11434/api/tags
+
+curl http://host.docker.internal:11434/api/tags
+```
+Averiguar puerto wsl
+```console
+cat /etc/resolv.conf | grep nameserver
+```
+
 # Add the repository to Apt sources:
 echo \
   "deb [arch=$(dpkg --print-architecture) signed-by=/etc/apt/keyrings/docker.asc] https://download.docker.com/linux/ubuntu \
