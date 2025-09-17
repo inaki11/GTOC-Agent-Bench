@@ -21,8 +21,8 @@ aide:
   <<: *defaults
   kwargs:
     <<: *kwargs_common
-    agent.code.model: gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
-    agent.feedback.model: gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
+    agent.code.model: local-qwen3:8b #gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
+    agent.feedback.model: local-qwen3:8b #gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
     agent.steps: *step_count
   env_vars:
     <<: *env_vars

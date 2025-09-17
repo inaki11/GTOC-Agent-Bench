@@ -92,6 +92,7 @@ COPY environment/instructions_obfuscated.txt /home/instructions_obfuscated.txt
 COPY environment/validate_submission.sh /home/validate_submission.sh
 COPY environment/entrypoint.sh /entrypoint.sh
 
+
 # convierto saltos de liena a linux
 RUN dos2unix /entrypoint.sh
 RUN dos2unix /mlebench/agents/aide/start.sh
