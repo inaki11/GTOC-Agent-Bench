@@ -44,6 +44,8 @@ ARG REQUIREMENTS=/tmp/requirements.txt
 COPY environment/requirements.txt ${REQUIREMENTS}
 
 # create conda environment and optionally install the requirements to it
+RUN /opt/conda/bin/conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/main && \
+    /opt/conda/bin/conda tos accept --override-channels --channel https://repo.anaconda.com/pkgs/r
 RUN /opt/conda/bin/conda create -n ${CONDA_ENV_NAME} python=${PYTHON_VERSION} -y
 ARG INSTALL_HEAVY_DEPENDENCIES=true
 ENV INSTALL_HEAVY_DEPENDENCIES=${INSTALL_HEAVY_DEPENDENCIES}
