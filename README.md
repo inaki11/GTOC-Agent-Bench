@@ -84,13 +84,13 @@ docker build --platform=linux/amd64 -t aide agents/aide/ --build-arg SUBMISSION_
 
 Run
 ```console
-python3 run_agent.py --agent-id aide --competition-set experiments/splits/spaceship-titanic.txt
+python3 run_agent.py --agent-id aide --competition-set experiments/splits/gtoc-upm.txt
 ```
 
 ### Debug run
 Run with retain flag so container is not removed
 ```console
-python3 run_agent.py --agent-id aide --competition-set experiments/splits/spaceship-titanic.txt --retain
+python3 run_agent.py --agent-id aide --competition-set experiments/splits/gtoc-upm.txt --retain
 ```
 
 Search docker ps id
@@ -101,8 +101,10 @@ docker ps -a
 ```console
 docker logs <ID>
 ```
-
-
+Ubicacion interna del paquete AIDE
+```console
+/opt/conda/envs/agent/lib/python3.10/site-packages/aide
+```
 # Run local LLM server
 
 ## Ollama
