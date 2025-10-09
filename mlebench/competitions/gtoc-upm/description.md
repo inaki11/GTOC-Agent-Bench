@@ -1,14 +1,4 @@
 # The Problem of the 12th Global Trajectory Optimisation Competition
-## Sustainable Asteroid Mining
-
-Hexi Baoyin, Fanghua Jiang, Zhong Zhang, Nan Zhang, Xiang Guo, Di Wu, Xuan Xie, Jia Yang
-*Laboratory of Astrodynamics, School of Aerospace Engineering, Tsinghua University*
-
-Haiyang Li, Yuming Peng, Wei Wang
-*Shanghai Institute of Satellite Engineering*
-
-Released: 19 June 2023
-\*
 
 ## 1. The Scenario
 

@@ -93,3 +93,6 @@ xlrd==2.0.1
 poliastro==0.17.0
 spiceypy==6.0.0 
 dymos==1.13.1
+casadi
+ipopt
+polliwog

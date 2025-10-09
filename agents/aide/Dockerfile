@@ -27,6 +27,9 @@ RUN apt-get update && apt-get install ffmpeg libsm6 libxext6  -y
 # create conda environment and install the requirements to it
 RUN conda run -n ${CONDA_ENV_NAME} pip install -r ${AGENT_DIR}/requirements.txt && \
     conda clean -afy
+# overwrite the config.yaml from aide with the local server address. 
+# This is a bit hacky, but it works for now. path: /opt/conda/envs/agent/lib/python3.10/site-packages/aide/backend/config.yaml
+COPY config.yaml /opt/conda/envs/agent/lib/python3.10/site-packages/aide/backend/config.yaml
 
 # put all the agent files in the expected location
 COPY . ${AGENT_DIR}
