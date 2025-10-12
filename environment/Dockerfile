@@ -52,11 +52,9 @@ ENV INSTALL_HEAVY_DEPENDENCIES=${INSTALL_HEAVY_DEPENDENCIES}
 
 # The rest of your Dockerfile
 RUN if [ "$INSTALL_HEAVY_DEPENDENCIES" = "true" ]; then \
-    # make both channels available and keep deterministic resolution
     /opt/conda/bin/conda config --add channels conda-forge         && \
     /opt/conda/bin/conda config --add channels tudat-team          && \
     /opt/conda/bin/conda config --set channel_priority strict      && \
-
     # install TudatPy with its deps coming from the two channels
     /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install \
           -c tudat-team -c conda-forge tudatpy=0.9.0 -y            && \
@@ -66,9 +64,10 @@ RUN if [ "$INSTALL_HEAVY_DEPENDENCIES" = "true" ]; then \
     /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge skyfield -y && \
     /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge casadi -y && \
     /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge pygmo -y && \
+	/opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge dymos -y && \
+	/opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge ipopt -y && \
+	/opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge dymos -y && \
     /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} pip install -r /tmp/requirements.txt && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} pip install tensorflow[and-cuda]==2.17 && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} pip install torch==2.2.0 torchaudio==2.2.0 torchtext==0.17.0 torchvision==0.17.0 && \
     /opt/conda/bin/conda clean -afy ; fi
 
 ENV PATH="/opt/conda/bin:${PATH}"
