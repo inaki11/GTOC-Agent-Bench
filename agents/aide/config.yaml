@@ -14,9 +14,9 @@ defaults: &defaults
     STEP_LIMIT: *step_count
 
 kwargs_common: &kwargs_common
-  agent.search.max_debug_depth: 6 # debug down a branch for up to 6 steps
+  agent.search.max_debug_depth: 20 # debug down a branch for up to 6 steps
   agent.search.debug_prob: 1 # always debug when there's something to debug
-  agent.search.num_drafts: 10 # implement 10 different initial solutions
+  agent.search.num_drafts: 1 # implement 10 different initial solutions
   agent.time_limit: *time_limit
   exec.timeout: 600 # 10 minutes per code execution
   copy_data: False # use symbolic links
@@ -25,12 +25,13 @@ aide:
   <<: *defaults
   kwargs:
     <<: *kwargs_common
-    agent.code.model: local-qwen3:8b #o4-mini-2025-04-16  #gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
-    agent.feedback.model: local-qwen3:8b #o4-mini-2025-04-16  #gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
+    agent.code.model: gemini-2.5-pro #local-qwen3:8b #o4-mini-2025-04-16  #gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
+    agent.feedback.model: gemini-2.5-flash #local-qwen3:8b #o4-mini-2025-04-16  #gpt-5-2025-08-07  #gpt-4.1-mini-2025-04-14
     agent.steps: *step_count
   env_vars:
     <<: *env_vars
     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
+    GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
 
 aide/dev:
   <<: *defaults
