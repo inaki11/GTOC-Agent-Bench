@@ -62,6 +62,10 @@ mlebench prepare -c gtoc-upm
 En caso de tener problemas con los checksums añadir " --overwrite-checks "
 
 los datos preparados se guardarán en " ~/.cache/mle-bench/data/gtoc-upm/prepared/ "
+Este directorio se monta dentro del contenedor en /home/data
+
+Opcionalmente mover el fichero **de432s.bsp** al directorio /home/inaki/.cache/mle-bench/data/gtoc-upm/prepared/public
+Este fichero contiene datos precisos de asteroides de JPL y es dependencia de alguna librería.
 
 
 # Run AIDE Agent Iñaki

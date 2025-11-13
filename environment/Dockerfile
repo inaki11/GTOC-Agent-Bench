@@ -1,4 +1,3 @@
-
 FROM ubuntu:20.04
 
 # Avoid interactive dialog from apt-get and other packages requiring configuration
@@ -28,6 +27,7 @@ RUN apt-get update && apt-get install -y \
     libsm6 \
     libxext6 \
 	dos2unix \
+	libstdc++6 && rm -rf /var/lib/apt/lists/* \
     && pip install jupyter \
     && rm -rf /var/lib/apt/lists/* # removes cache
 
@@ -52,24 +52,38 @@ ENV INSTALL_HEAVY_DEPENDENCIES=${INSTALL_HEAVY_DEPENDENCIES}
 
 # The rest of your Dockerfile
 RUN if [ "$INSTALL_HEAVY_DEPENDENCIES" = "true" ]; then \
-    /opt/conda/bin/conda config --add channels conda-forge         && \
-    /opt/conda/bin/conda config --add channels tudat-team          && \
-    /opt/conda/bin/conda config --set channel_priority strict      && \
-    # install TudatPy with its deps coming from the two channels
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install \
-          -c tudat-team -c conda-forge tudatpy=0.9.0 -y            && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge pykep=2.6 -y && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge poliastro -y && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge astropy -y && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge skyfield -y && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge casadi -y && \
-    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge pygmo -y && \
-	/opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge dymos -y && \
-	/opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge ipopt -y && \
-	/opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -c conda-forge dymos -y && \
+    # Configure conda channels
+    /opt/conda/bin/conda config --add channels conda-forge    && \
+    /opt/conda/bin/conda config --add channels tudat-team    && \
+    /opt/conda/bin/conda config --set channel_priority strict && \
+    
+    # Install all heavy dependencies in a SINGLE command.
+    # This is much faster and far more reliable, as it only
+    # solves dependencies and fetches packages once.
+    /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda install -y \
+      libstdcxx-ng \
+      tudatpy \
+      pykep \
+      poliastro \
+      astropy \
+      skyfield \
+      casadi \
+      pygmo \
+      dymos \
+      ipopt && \
+    
+    # Install any remaining pip requirements
     /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} pip install -r /tmp/requirements.txt && \
+    
+    # Clean up conda cache
     /opt/conda/bin/conda clean -afy ; fi
+	
+	# This permanently sets the LD_PRELOAD variable *for this environment*
+    # It forces the OS to use the conda-provided libstdc++ library to fix pykep import error
+# This command runs in the shell and finishes
+RUN /opt/conda/bin/conda run -n ${CONDA_ENV_NAME} conda env config vars set LD_PRELOAD=/opt/conda/envs/${CONDA_ENV_NAME}/lib/libstdc++.so.6
 
+# This is a separate Dockerfile instruction that sets the PATH for the next steps
 ENV PATH="/opt/conda/bin:${PATH}"
 
 # Installs from here onward go into the conda base env; previous was installed to /usr/bin/python
