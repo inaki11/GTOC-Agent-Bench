@@ -2,8 +2,8 @@
 local_address: "http://10.255.255.254:11434/v1" # ip wsl2 iñaki
 
 vars:
-  step_count: &step_count 5
-  time_limit: &time_limit 7200 # 2 hrs
+  step_count: &step_count 20
+  time_limit: &time_limit 36000 # 10 hours
 
 defaults: &defaults
   start: aide/start.sh
@@ -16,9 +16,9 @@ defaults: &defaults
 kwargs_common: &kwargs_common
   agent.search.max_debug_depth: 20 # debug down a branch for up to 6 steps
   agent.search.debug_prob: 1 # always debug when there's something to debug
-  agent.search.num_drafts: 1 # implement 10 different initial solutions
+  agent.search.num_drafts: 20 # implement 20 different initial solutions
   agent.time_limit: *time_limit
-  exec.timeout: 600 # 10 minutes per code execution
+  exec.timeout: 1800 # 30 minutes per code execution
   copy_data: False # use symbolic links
 
 aide:
@@ -32,6 +32,9 @@ aide:
     <<: *env_vars
     OPENAI_API_KEY: ${{ secrets.OPENAI_API_KEY }}
     GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+    REFINE: ${{ secrets.REFINE}}
+    DRAFTS_FILE: ${{ secrets.DRAFTS_FILE}}
+
 
 aide/dev:
   <<: *defaults
