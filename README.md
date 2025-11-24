@@ -109,6 +109,12 @@ Ubicacion interna del paquete AIDE
 ```console
 /opt/conda/envs/agent/lib/python3.10/site-packages/aide
 ```
+
+# Run local label studio
+```console
+docker run -d   --name labelstudio   -p 8080:8080   -v ~/labelstudio_data:/label-studio/data   heartexlabs/label-studio
+```
+
 # Run local LLM server
 
 ## Ollama
