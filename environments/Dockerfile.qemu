@@ -1,0 +1,9 @@
+# Development profile for running the amd64 image through QEMU on an ARM Linux host.
+ARG BASE_IMAGE=gtoc-bench:phase1-cpu
+FROM ${BASE_IMAGE}
+ENV KMP_AFFINITY=disabled
+COPY src/ /opt/gtoc/src/
+COPY problems/gtoc12/instructions.md /opt/gtoc/problems/gtoc12/instructions.md
+COPY environments/judge-checks/ /opt/gtoc/environments/judge-checks/
+COPY environments/finalize-image.py /opt/gtoc/environments/finalize-image.py
+RUN /opt/conda/bin/python /opt/gtoc/environments/finalize-image.py

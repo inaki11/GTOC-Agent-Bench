@@ -1,0 +1,41 @@
+{
+  "artifact_sha256": "017b504b96111eb5bc03a1cedc74a4c3ade39aca8afc0a9b91dd9156fe96166e",
+  "score": 3101.1460381579795,
+  "score_unit": "points",
+  "problem_revision": "gtocx-independent-v1",
+  "validator_revision": "c2ef19c9094a7a2a6fa5e4622e8b7a8b8345c7da8ef271880cd116fc6b9cfd41",
+  "validator_kind": "independent_conservative",
+  "status": "valid",
+  "diagnostics": [],
+  "score_breakdown": {
+    "settled_stars": 3798,
+    "radial_error": 2.2734441994613332,
+    "angular_error": 1.1313527133149863,
+    "distribution_term": 1656.2429276066741,
+    "delta_v_used_km_s": 812701.1214331874,
+    "delta_v_max_km_s": 1521700.0,
+    "delta_v_ratio": 1.872398056147016,
+    "time_bonus": 1.0,
+    "total": 3101.1460381579795
+  },
+  "format_notes": [
+    "Line 30: source departures are not sorted; dependencies and departure epochs are verified independently of row order, as required by published final files"
+  ],
+  "metrics": {
+    "propagated_segments": 4394,
+    "minimum_radius_kpc": 2.0171880095402495,
+    "maximum_radius_kpc": 31.99939500130274,
+    "max_position_error_kpc": 2.741822909123917e-06,
+    "max_arrival_magnitude_error_km_s": 7.676586619709269e-07,
+    "max_arrival_vector_difference_km_s": 1312.6490378526335,
+    "max_solver_position_difference_kpc": 4.1581626784711216e-10,
+    "max_solver_velocity_difference_km_s": 2.112303810277778e-08,
+    "mother_ships": 3,
+    "settlement_pods": 12,
+    "fast_ships": 2,
+    "settler_ships": 3784,
+    "settled_stars": 3798,
+    "last_settlement_myr": 90.0
+  },
+  "validation_seconds": 103.79659879699466
+}

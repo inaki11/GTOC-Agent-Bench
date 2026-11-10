@@ -1,0 +1,77 @@
+GTOCX - 
+
+Discussions
+GTOC X
+10th Global Trajectory Optimisation Competition
+(archived version of original website at gtocx.jpl.nasa.gov)
+Toggle navigation
+Home
+About
+Competition
+May 21, 2019, 8 p.m. UTC
+June 12, 2019, 8 p.m. UTC
+Timeline
+The competition is over.
+The Problem
+Data
+Solution Format & Submission Details
+Teams
+Announcements
+Teams' Solutions
+Leaderboard
+Discussion
+Discussion
+New Submission-Period Start Time
+Anastassios@JPL
+Teams,  we hope you are enjoying building your computational machinery to settle the Milky Way.
+We are pushing the start of the submission period to Tuesday 21 May, 8pm UTC.   That epoch will be the value of  "t_start"  in the Bonus function, B.
+2019-05-16
+17:44
+DietmarW
+Are submissions just for output verification allowed before (without official scoring)?
+Is manual verification of solutions sent by mail performed until then?
+The proposed way to verify our implementation of the merit function is the submission system, and we need
+a correct merit function for our search. Lets hope the server is strong enough to handle all the submissions which are ready until May 21 at once.
+2019-05-17
+03:51
+Anastassios@JPL
+The new submission period start time also applies to by-mail submissions.   We trust that our servers will serve the submission onslaught - we will keep an eye on them; hopefully we can deal with any glitches.  Once the submissions go live, I think the solution verification process will be suitable for verifying teams' merit function implementation.
+2019-05-17
+12:33
+DietmarW
+As I remember Tsinghua had a quite reasonable solution after 2 days during GTOC9. But perhaps we get only a limited "submission onslaught", even we at Jena have no submission ready yet. Quite an interesting task, congratulations Anastassios! In the last two days I learned more about our "home" inside Milky Way than during my whole life before.
+2019-05-17
+16:11
+Anastassios@JPL
+Thank you Dietmar, and thank you for your patience.   Congratulations to Team Jena and to the other teams participating in back-to-back TOCs with so much enthusiasm!
+2019-05-18
+01:19
+NASA
+|
+CALTECH
+|
+PRIVACY
+|
+IMAGE POLICY
+|
+FAQ
+|
+FEEDBACK
+Site Manager:
+Anastassios Petropoulos
+CL#: 19-2147
+var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//sophia.estec.esa.int/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+jQuery(document).ready(function($) {
+    $(".link-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});

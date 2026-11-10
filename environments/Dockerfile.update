@@ -1,0 +1,19 @@
+# Update an existing scientific/agent profile without replacing its runtimes.
+ARG BASE_IMAGE=gtoc-bench:phase1-cpu
+FROM ${BASE_IMAGE}
+USER root
+RUN apt-get update && apt-get install -y --no-install-recommends file poppler-utils build-essential pkg-config \
+    && rm -rf /var/lib/apt/lists/*
+COPY environments/science-tools.lock /opt/science-tools.lock
+COPY environments/science-source.lock /opt/science-source.lock
+RUN /opt/conda/bin/python -m pip install --no-cache-dir --require-hashes --no-deps --only-binary=:all: -r /opt/science-tools.lock \
+    && PKG_CONFIG_PATH=/opt/conda/lib/pkgconfig /opt/conda/bin/python -m pip install --no-cache-dir --require-hashes --no-deps --no-build-isolation -r /opt/science-source.lock \
+    && /opt/conda/bin/python -m pip freeze > /opt/science-pip.txt
+COPY src/ /opt/gtoc/src/
+COPY problems/ /opt/gtoc/problems/
+COPY environments/swe-tools/ /opt/gtoc/environments/swe-tools/
+COPY environments/agents.lock.json environments/providers.lock.json /opt/gtoc/environments/
+COPY environments/judge-checks/ /opt/gtoc/environments/judge-checks/
+COPY environments/finalize-image.py /opt/gtoc/environments/finalize-image.py
+RUN /opt/conda/bin/python /opt/gtoc/environments/finalize-image.py \
+    && /opt/conda/bin/python -c 'import json; from gtoc_bench.hardware import tools_inventory; print(json.dumps(tools_inventory(), indent=2))' > /opt/science-tools.json

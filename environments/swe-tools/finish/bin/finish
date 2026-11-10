@@ -1,0 +1,4 @@
+#!/bin/bash
+# Upstream requires this marker file to finish, even without a git repository.
+: > /root/model.patch
+printf '%s\n' '<<SWE_AGENT_SUBMISSION>>' '<<SWE_AGENT_SUBMISSION>>'

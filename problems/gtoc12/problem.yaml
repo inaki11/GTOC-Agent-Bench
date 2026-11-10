@@ -1,0 +1,10 @@
+id: gtoc12
+revision: gtoc12-static-v1
+objective: maximize
+score_unit: kg
+baseline_score: 0
+activity_coefficients: false
+validator_platform: linux/amd64
+max_submission_bytes: 16777216
+validation_timeout_seconds: 30
+max_pending_evaluations: 1

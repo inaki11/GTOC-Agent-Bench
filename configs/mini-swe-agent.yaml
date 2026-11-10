@@ -1,0 +1,29 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: mini_swe_agent
+  version: 2.4.6
+model:
+  id: gpt-6.1-sol
+  reasoning: high
+  max_output_tokens: 16384
+provider:
+  id: openai
+  protocol: chat_completions
+  base_url: https://api.openai.com/v1
+  env_file: ~/.config/gtoc-bench/providers/openai.env
+  api_key_variable: OPENAI_API_KEY
+  auth_method: api_key
+environment:
+  image: auto
+hardware:
+  gpus: auto
+  workspace_gb: 8
+budget:
+  wall_seconds: 3600
+  token_limit: 1000000
+recovery:
+  clock_policy: provider_wait
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

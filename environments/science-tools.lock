@@ -1,0 +1,20 @@
+# General-purpose compiler; Linux x86-64 wheel from PyPI, no runtime dependencies.
+ziglang==0.17.0 \
+    --hash=sha256:97079827064a7492cce5541ceb438ae8003ce1e54e399676da2d62fb7a5dc08b
+# Runtime inspection and YAML configuration; no additional runtime dependencies.
+threadpoolctl==3.6.0 \
+    --hash=sha256:43a0b8fd5a2928500110039e43a5eed8480b918967083ea48dc3ab9f13c4a7fb
+PyYAML==6.0.3 \
+    --hash=sha256:ba1cc08a7ccde2d2ec775841541641e4548226580ab850948cbfda66a1befcdc
+# Scientific Python 3.12 / Linux x86-64 wheels. Dependencies already in science-linux-64.lock.
+casadi==3.8.2 \
+    --hash=sha256:118df1a9ae944a80989849ea5cfa76c20b28e95d6f568c9f989e8c16a66ab1db \
+    --hash=sha256:e7565f06da49f5d097c57eba0f1f53b86242dd6c876c5aea5193f03364a02a14
+numba==0.68.1 \
+    --hash=sha256:8b33fee239194b9b6cb9b176f3c2563b94e5882fd846748ad0cf960daeee5406
+llvmlite==0.50.0 \
+    --hash=sha256:d501e5103076b9a14be885d2574dc2f6793171aa54a853d1244e011d476f1399
+pybind11==3.1.0 \
+    --hash=sha256:b8488090f8acffbcb6b5d6a85571a6827a0a2981ffb75e5a0b27b87c4a6b7dd0
+Cython==3.3.0 \
+    --hash=sha256:428fafed98ea26927000a287b4dfc9ef07339f56656a5329a34eaa593f79a4f8

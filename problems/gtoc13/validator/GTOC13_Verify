@@ -1,0 +1,6 @@
+#!/usr/bin/env python3
+"""Thin command wrapper; the reviewed judge implementation is in gtoc_bench.gtoc13."""
+
+from gtoc_bench.gtoc13.__main__ import main
+
+raise SystemExit(main())

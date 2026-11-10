@@ -1,57 +1,32 @@
 [build-system]
-requires = ["setuptools", "wheel"]
-build-backend = "setuptools.build_meta"
+requires = ["hatchling>=1.27,<2"]
+build-backend = "hatchling.build"
 
 [project]
-name = 'mlebench'
-readme = "README.md"
+name = "gtoc-bench"
+version = "0.1.0"
+description = "Reproducible, isolated agent evaluations on GTOC problems"
 requires-python = ">=3.11"
-version = "1.0.0"
-dependencies = [
-  "appdirs>=1.4.4",
-  "docker>=7.1",
-  "fastparquet>=2024.5.0",
-  "kaggle==1.6.17",
-  "levenshtein>=0.25.1",
-  "openai>=1.10.0",
-  "pandas>=2.2",
-  "pyyaml>=6.0",
-  "py7zr>=0.21",
-  "scikit-learn>=1.5",
-  "pillow>=10.3",
-  "python-dotenv>=1.0.1",
-  "aiohttp>=3.9.5",
-  "tenacity>=8.5.0",
-  "nbformat>=5.10.4",
-  "nbconvert>=7.16.4",
-  "ipython>=8.26.0",
-  "pymongo>=4.8.0",
-  "pycocotools>=2.0.8",
-  "diskcache>=5.6.3",
-  "pyquaternion>=0.9.9",
-  "shapely>=2.0.5",
-]
-
-[tool.setuptools]
-packages = { find = { include = ["mlebench", "mlebench.*"] } }
-
-[project.scripts]
-mlebench = "mlebench.cli:main"
+dependencies = ["httpx==0.28.1", "PyYAML==6.0.3", "PyJWT[crypto]==2.15.1"]
 
 [project.optional-dependencies]
-formatters = ["black>=23.3", "isort>=5.13"]
-dev = ["pytest>=8.2", "mypy>=1.10", "pre-commit>=3.7"]
+judge = ["numpy==2.2.6", "scipy==1.16.2"]
+analysis = ["matplotlib==3.10.7"]
 
-[tool.setuptools.package-data]
-mlebench = ["competitions/**/*"]
+[project.scripts]
+gtoc = "gtoc_bench.cli:main"
 
-[tool.black]
-line-length = 100 # match the precommit
+[dependency-groups]
+dev = ["pytest==8.4.2", "ruff==0.14.2", "numpy==2.2.6", "scipy==1.16.2"]
 
 [tool.pytest.ini_options]
-# Pytest can take a long time to collect test cases
-# when many Kaggle competitions have been downloaded.
-# We avoid this up by telling Pytest where the
-# tests live ahead of time.
 testpaths = ["tests"]
+markers = ["docker: integration tests requiring the built Linux amd64 image", "proxy: integration tests requiring the pinned local CLIProxyAPI binary", "slow: full submitted-trajectory numerical validation"]
 
+[tool.ruff]
+line-length = 100
+target-version = "py311"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP"]
+ignore = ["E501"]

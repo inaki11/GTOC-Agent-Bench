@@ -1,0 +1,85 @@
+{
+  "id": "gtoc13",
+  "revision": "gtoc13-reconstructed-controls-v2",
+  "validator_kind": "independent_reconstructed_controls",
+  "files": {
+    "PROVENANCE.md": {
+      "sha256": "ad387310c20b0aca8e2deda57f208d1594f4baae2657dd4176996e90f9aaa7d1",
+      "bytes": 1933
+    },
+    "data/gtoc13_asteroids.csv": {
+      "sha256": "29b6fa0d19502d5d9512f80ccc095f835570b4269fdbf5bccd5d8a7970cd3235",
+      "bytes": 14675
+    },
+    "data/gtoc13_comets.csv": {
+      "sha256": "dcaf2765c02cf280ece76d84f25de8af2377f645606b62bd46310b55522eedb9",
+      "bytes": 2438
+    },
+    "data/gtoc13_planets.csv": {
+      "sha256": "5dbdbbec91ed37643b1ff8ef0cbfceb297f0b4ad81c84e047a4381690d784801",
+      "bytes": 1117
+    },
+    "documents/gtoc13_problem_statement.pdf": {
+      "sha256": "ec07a9c24075de6bdb99641456d02c2c7162a7d035bdb13b57fcc4b2b7c39369",
+      "bytes": 766637
+    },
+    "documents/gtoc13_submission_format.pdf": {
+      "sha256": "3520fbd85028c8c1c57f3bd1b51461e691be9c663ac0477abbf9107429f7e68f",
+      "bytes": 273694
+    },
+    "instructions.md": {
+      "sha256": "5f7a904019cac3cb865bf05297de3635cb0207ed01e3088d7437769cdb122a7e",
+      "bytes": 4850
+    },
+    "problem.yaml": {
+      "sha256": "1a67d5aeba87490f6df9fcffd9e802d355d66008eef9a28e72087107041ad279",
+      "bytes": 511
+    },
+    "statement.md": {
+      "sha256": "bfad7de098d7eab8db1d8bc0ff4104f51d806166931bbea188807d03b074f9bb",
+      "bytes": 31631
+    },
+    "submission-format.md": {
+      "sha256": "c9ea4f6a838106d633ceb8014fe16157b3792f40f8b51d4df2344b9248d60764",
+      "bytes": 18169
+    },
+    "validation-policy.md": {
+      "sha256": "d745b8fc7a19896e1be9f5c137cf0689796de8937b6ff818d7c6c5440fa2e994",
+      "bytes": 8817
+    },
+    "validator/GTOC13_Verify": {
+      "sha256": "9d6b8aecf671a4dfd036a342d12e9b1cc137a4302b54d5d66f775510d37b3a3c",
+      "bytes": 181
+    },
+    "validator/README.md": {
+      "sha256": "9fd109172d6bc5366eaaa4b8de519dedf4dff09ce09cf15eef1e422fd27a9de2",
+      "bytes": 762
+    }
+  },
+  "code_files": {
+    "src/gtoc_bench/gtoc13/__init__.py": {
+      "sha256": "d794ea00635ff8fb207701885bf6c40c9cdacc5d9fd92b18f2e393e8ac8933a6",
+      "bytes": 237
+    },
+    "src/gtoc_bench/gtoc13/__main__.py": {
+      "sha256": "2fb8b28739a840aab0104bf5910c4134ccbb7c0ffd950c2cb4be141fd9b876bb",
+      "bytes": 1245
+    },
+    "src/gtoc_bench/gtoc13/control.py": {
+      "sha256": "ac3f4de1c3df2211ecf7cae85bc24acc94f4a9a9f40d6b92ddad44531463a66c",
+      "bytes": 4023
+    },
+    "src/gtoc_bench/gtoc13/format.py": {
+      "sha256": "4394dbc4e3a430a9056c82086efdf6196c4c835ab9fb48ff4b43ed3317e65450",
+      "bytes": 6937
+    },
+    "src/gtoc_bench/gtoc13/judge.py": {
+      "sha256": "ba0b061d21eb8747b169a2d9255188918274d46621d4afc759dc1c8ff9afd7fe",
+      "bytes": 26399
+    },
+    "src/gtoc_bench/gtoc13/model.py": {
+      "sha256": "50a6aa9488f31008016915fc7e0e84c87bac02a868100318b8cfeb60804b5a55",
+      "bytes": 5284
+    }
+  }
+}

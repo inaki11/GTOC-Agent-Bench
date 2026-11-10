@@ -1,0 +1,25 @@
+{
+  "legacy_commit": "4d95712de66973fee36ddc34f3ae20d6852b4b6e",
+  "files": {
+    "statement.md": {
+      "sha256": "58314a73abc1ae12471aae7a63e35461e8ba095364f327998dece2fe595a54a0",
+      "source": "mlebench/competitions/gtoc-upm/description.md",
+      "bytes": 18663
+    },
+    "data/GTOC12_Asteroids_Data.txt": {
+      "sha256": "99a42cc30d4498d99b8acf507790ab74f040ff2e202ef6c8e90bbb39b6c46675",
+      "source": "mlebench/competitions/gtoc-upm/GTOC12_Verify/GTOC12_Asteroids_Data.txt",
+      "bytes": 6840111
+    },
+    "validator/GTOC12_Verify": {
+      "sha256": "d4e4bc81129266420b27c9bde038bce9eda1960e7de9c695772fbfdb1cc82cd6",
+      "source": "mlebench/competitions/gtoc-upm/GTOC12_Verify/GTOC12_Verify",
+      "bytes": 187200
+    },
+    "validator/ScoreData.txt": {
+      "sha256": "9a271f2a916b0b6ee6cecb2426f0b3206ef074578be55d9bc94f6f3fe3ab86aa",
+      "source": "mlebench/competitions/gtoc-upm/GTOC12_Verify/ScoreData.txt",
+      "bytes": 2
+    }
+  }
+}

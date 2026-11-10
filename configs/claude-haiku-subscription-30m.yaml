@@ -1,0 +1,28 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: claude_code
+  version: 2.1.308
+model:
+  id: claude-haiku-5-5
+  reasoning: low
+  max_output_tokens: 8192
+provider:
+  id: anthropic
+  protocol: anthropic
+  auth_method: claude_subscription
+  profile: current
+  auth_dir: ~/.config/gtoc-bench/claude-code
+environment:
+  image: gtoc-bench:claude-subscription-test
+hardware:
+  gpus: none
+  workspace_gb: 8
+budget:
+  wall_seconds: 1800
+  token_limit: null
+recovery:
+  clock_policy: continuous_wall
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

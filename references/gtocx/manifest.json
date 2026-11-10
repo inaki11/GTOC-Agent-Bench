@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "retrieved_at_utc": "2026-10-31T17:08:00+00:00",
+  "source_base": "https://electra.estec.esa.int/jpl.gtocx/",
+  "submission_index_url": "https://electra.estec.esa.int/jpl.gtocx/gtocx/teams-solutions/index.html",
+  "files": {
+    "submissions/TsinghuaLAD-XINGYI-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/TsinghuaLAD-XINGYI-gtocx-leaderboard-soln",
+      "sha256": "dbd9fc906b113bfa9bc1d90561e355a888230d54caf8c89bbc8ef8c2fecb0f79",
+      "bytes": 918907
+    },
+    "submissions/CSU-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/CSU-gtocx-leaderboard-soln",
+      "sha256": "cd027ff29e1a2819d74406740334c45c166680c604151f25fb24d4052343a825",
+      "bytes": 210326
+    },
+    "submissions/TeamJena-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/TeamJena-gtocx-leaderboard-soln",
+      "sha256": "b9a8efb7da7d16281a7a06813c7195ba86c2a023a9b70a55019be74689cd7f1c",
+      "bytes": 1287
+    },
+    "submissions/TheCitadel-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/TheCitadel-gtocx-leaderboard-soln",
+      "sha256": "84aff2a5ef2b7de8fd759fa704324360c262ee2e6fb4147f2f3e6bb65ec2dfc2",
+      "bytes": 226
+    },
+    "submissions/worhp2orb-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/worhp2orb-gtocx-leaderboard-soln",
+      "sha256": "bb744995f3f10288ff22b9485535bfe24d0d425467c253a595e34d8da5010fcb",
+      "bytes": 987907
+    },
+    "submissions/AerospaceCorp-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/AerospaceCorp-gtocx-leaderboard-soln",
+      "sha256": "694bb6de84884d84a71f5ecf60fdf8cfea862086b8e589188238620d738a4ad1",
+      "bytes": 654621
+    },
+    "submissions/TeamKataskopoi-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/TeamKataskopoi-gtocx-leaderboard-soln",
+      "sha256": "4b04c08505c5a2724f53721e460e357e7e0f2c9e5a2ff9dfc53b3250519dcf8c",
+      "bytes": 242278
+    },
+    "submissions/ESA-ACT-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/ESA-ACT-gtocx-leaderboard-soln",
+      "sha256": "7aeec4a5775774fe18d798b252358bf82f42fc1fb527fa9382420c7c804163d3",
+      "bytes": 651824
+    },
+    "submissions/NUDT-XSCC-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/NUDT-XSCC-gtocx-leaderboard-soln",
+      "sha256": "017b504b96111eb5bc03a1cedc74a4c3ade39aca8afc0a9b91dd9156fe96166e",
+      "bytes": 627954
+    },
+    "submissions/1-2-B-num1-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/1-2-B-num1-gtocx-leaderboard-soln",
+      "sha256": "38efb5b60094e650b0fc47583010316b3163f21b3083fc443aa23ded74a15d83",
+      "bytes": 250347
+    },
+    "submissions/MSU-RAS-RUDN-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/MSU-RAS-RUDN-gtocx-leaderboard-soln",
+      "sha256": "f178ce5c4c9721a5610a455d4f94bb190ea310123c2db7995da0bae53fae9363",
+      "bytes": 94528
+    },
+    "submissions/HIT_BACC-gtocx-leaderboard-soln": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/media/FLB/HIT_BACC-gtocx-leaderboard-soln",
+      "sha256": "835364823c7bc551cb955f86a5b628fd388801bea748680a8d82d610af98750c",
+      "bytes": 331047
+    }
+  }
+}

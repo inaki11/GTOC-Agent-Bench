@@ -1,0 +1,3 @@
+# Build against the pinned IPOPT/NumPy in science-linux-64.lock, without a solver upgrade.
+cyipopt==1.7.0 \
+    --hash=sha256:527eab917415af8808df05ab1899df12bde6e95e5c5d32644b59a69e18561471

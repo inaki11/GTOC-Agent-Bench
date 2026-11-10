@@ -1,0 +1,28 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: claude_code
+  version: 2.1.308
+model:
+  id: claude-sonnet-4-6
+  reasoning: high
+  max_output_tokens: 16384
+provider:
+  id: anthropic
+  protocol: anthropic
+  auth_method: claude_subscription
+  profile: default
+  auth_dir: ~/.config/gtoc-bench/claude-code
+environment:
+  image: auto
+hardware:
+  gpus: auto
+  workspace_gb: 8
+budget:
+  wall_seconds: 3600
+  token_limit: 1000000
+recovery:
+  clock_policy: continuous_wall
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

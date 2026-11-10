@@ -1,0 +1,51 @@
+{
+  "problem": "gtoc11",
+  "recorded_on": "2026-11-03",
+  "received_files": 4,
+  "files": {
+    "problems/gtoc11/data/Candidate Asteroids.txt": {
+      "sha256": "04cd1b5590f120396c408613ae8c5ef9f96687d46fc169ab43060bb6440e4b4e",
+      "bytes": 8862855
+    },
+    "problems/gtoc11/validator/GTOC11Check_Linux": {
+      "sha256": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+      "bytes": 169880
+    },
+    "references/gtoc11/received/Solution.txt": {
+      "sha256": "f62eae63d5f23cfc9f76c45d4ff6b5494433911dc93e18059d51d5115b9e4cc9",
+      "bytes": 41538543
+    },
+    "references/gtoc11/received/GTOC11Check_Windows.exe": {
+      "sha256": "82a7b2e4aeb441f864aa331a71ba104c581ec9268e940b6d41d386917203df35",
+      "bytes": 75776
+    },
+    "references/gtoc11/organizer-instructions.txt": {
+      "sha256": "6ccedc9223cd1a1eda248610aa16c2c9c18a99dd7ed6d436ebb9b10bb727c46c",
+      "bytes": 692
+    },
+    "references/gtoc11/sources/schedule-announcement.html": {
+      "sha256": "e938cafa28d51d1470dc08e55605ef79e17a65a21c55a43e92ab62c1c5459bb3",
+      "bytes": 972345,
+      "publication_redactions": {
+        "public_website_api_keys": 1,
+        "original_capture_sha256": "100b5154bbbda778c2a9b2315b8c0ed5f2181494f0d8c696e907664e3a19369f",
+        "reason": "Remove frontend API-key literals; announcement content and dates are unchanged."
+      }
+    },
+    "references/gtoc11/sources/final-statement-excerpt.txt": {
+      "sha256": "b79d565805b6e33abdc552bff6026d4ed84646274dc146ebc9c011ecb6624632",
+      "bytes": 894
+    },
+    "references/gtoc11/sources/gtoc11_problem_stmt_2021-10-10_SUPERSEDED.pdf": {
+      "sha256": "e5882026b35feb2bd5757eac399051af156077c2f9e8e49e4a53de10365968ea",
+      "bytes": 869055
+    }
+  },
+  "source_notes": {
+    "historical_statement_url": "https://raw.githubusercontent.com/jondavis847/gtoc_11/48e0bca768f3686921b8453c135a17d5393dfae7/gtoc11_problem_stmt.pdf",
+    "historical_statement_version": "2021-10-10, superseded alpha=1e-9",
+    "final_statement_url": "https://sophia.estec.esa.int/gtoc_portal/wp-content/uploads/2021/12/gtoc11_problem_stmt.pdf",
+    "final_statement_capture": "Indexed final text; direct PDF unavailable. alpha=6e-9.",
+    "schedule_url": "https://groups.google.com/g/gtoc_competition/c/VpCF-OOedC4"
+  }
+}

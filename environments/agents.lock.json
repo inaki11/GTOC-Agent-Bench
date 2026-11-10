@@ -1,0 +1,45 @@
+{
+  "checked_at": "2026-10-28",
+  "agents": {
+    "openhands": {
+      "package": "openhands",
+      "version": "1.16.0",
+      "sdk_version": "1.21.0",
+      "source": "https://github.com/OpenHands/OpenHands-CLI/releases/tag/1.16.0",
+      "dependency_lock": "environments/python-agents.lock"
+    },
+    "swe_agent": {
+      "package": "sweagent",
+      "version": "1.1.0",
+      "commit": "0f3acafacabc0def8cc76b4e48acb4b6cf302cb9",
+      "archive_sha256": "2b41fb02041ba570268450e150a5a263e35a2ca8daa87c82a9d2dc14f2b7a104",
+      "source": "https://github.com/SWE-agent/SWE-agent/releases/tag/v1.1.0",
+      "dependency_lock": "environments/python-agents.lock"
+    },
+    "mini_swe_agent": {
+      "package": "mini-swe-agent",
+      "version": "2.4.6",
+      "source": "https://github.com/SWE-agent/mini-swe-agent/releases/tag/v2.4.6",
+      "dependency_lock": "environments/python-agents.lock"
+    },
+    "codex": {
+      "package": "@openai/codex",
+      "version": "0.164.0",
+      "integrity": "sha512-TWj7UGyPRe3Pj/A3ddNAxs1te3a/W/xAd+J0LHrrFTmsSfahGMOLF/vn88D3QCIgAT3B1rm1y/Z3NYE0rx6cZQ==",
+      "tarball": "https://registry.npmjs.org/@openai/codex/-/codex-0.164.0.tgz"
+    },
+    "claude_code": {
+      "package": "@anthropic-ai/claude-code",
+      "version": "2.1.308",
+      "integrity": "sha512-b2HnszgyN73wRTFP+IYPDJNn9ADXnG6jr26ibL+w03HSKqfb6GqE8Jnfr4mz37Zv4AT/NP+B5/3c1F89WTdWSA==",
+      "tarball": "https://registry.npmjs.org/@anthropic-ai/claude-code/-/claude-code-2.1.308.tgz"
+    },
+    "antigravity": {
+      "package": "google-antigravity",
+      "version": "0.1.23",
+      "source": "https://github.com/Google-Antigravity/antigravity-sdk-python",
+      "interface": "official SDK LocalOpenAIAgentConfig; full native harness, gateway inference",
+      "dependency_lock": "environments/antigravity.lock"
+    }
+  }
+}

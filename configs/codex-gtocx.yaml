@@ -1,0 +1,28 @@
+schema_version: 1
+purpose: development
+problem: gtocx
+agent:
+  id: codex
+  version: 0.164.0
+model:
+  id: gpt-6.1-sol
+  reasoning: high
+  max_output_tokens: 16384
+provider:
+  id: openai
+  protocol: responses
+  base_url: https://api.openai.com/v1
+  env_file: ~/.config/gtoc-bench/providers/openai.env
+  api_key_variable: OPENAI_API_KEY
+environment:
+  image: gtoc-bench:gtocx-cpu-v2
+hardware:
+  gpus: none
+  workspace_gb: 8
+budget:
+  wall_seconds: 3600
+  token_limit: 1000000
+recovery:
+  clock_policy: provider_wait
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

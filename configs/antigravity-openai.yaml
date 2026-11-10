@@ -1,0 +1,21 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: antigravity
+  version: 0.1.23
+model:
+  id: gpt-6.1-sol
+  reasoning: high
+provider:
+  id: openai
+  protocol: chat_completions
+  base_url: https://api.openai.com/v1
+  auth_method: api_key
+  env_file: ~/.config/gtoc-bench/openai.env
+  api_key_variable: OPENAI_API_KEY
+hardware:
+  gpus: auto
+budget:
+  wall_seconds: 3600
+  token_limit: null

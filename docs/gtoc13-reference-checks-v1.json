@@ -1,0 +1,136 @@
+{
+  "planetx-conic.txt": {
+    "artifact_sha256": "5eed55c64c4e963c27aef9371655f3bd5873d3060fad1eed082955abc3538f8d",
+    "score_unit": "points",
+    "problem_revision": "gtoc13-conservative-v1",
+    "validator_revision": "074b1ca99f3fbaee40b9b546322dda02f8026d4ebe9ea46f9c1b2447d6283ada",
+    "validator_kind": "independent_conservative",
+    "score": 21.92704582292371,
+    "status": "valid",
+    "diagnostics": [],
+    "score_breakdown": {
+      "science": 21.92704582292371,
+      "grand_tour_bonus": 1.0,
+      "time_bonus": 1.0,
+      "by_body": {
+        "10": 21.92704582292371
+      },
+      "total": 21.92704582292371
+    },
+    "metrics": {
+      "segments": 1,
+      "max_position_residual_km": 2.384185791015625e-07,
+      "max_velocity_residual_km_s": 3.552744595368554e-15,
+      "max_solver_position_difference_km": 0.0016771254950976161,
+      "max_solver_velocity_difference_km_s": 9.38387989463075e-13,
+      "flybys": 1,
+      "science_flybys": 1,
+      "initial_vx_km_s": 17.789602486758188,
+      "duration_seconds": 547238014.6808723,
+      "minimum_radius_au": 138.29784849407713,
+      "first_perihelion_seconds": null
+    },
+    "validation_seconds": 0.016543082892894745
+  },
+  "kaist-high-score.txt": {
+    "artifact_sha256": "eee6ac064b05f5f92c92bd4869ff55671c26709bd859de8fea0f1d46efba093a",
+    "score_unit": "points",
+    "problem_revision": "gtoc13-conservative-v1",
+    "validator_revision": "074b1ca99f3fbaee40b9b546322dda02f8026d4ebe9ea46f9c1b2447d6283ada",
+    "validator_kind": "independent_conservative",
+    "score": 111.20732893720552,
+    "status": "valid",
+    "diagnostics": [],
+    "score_breakdown": {
+      "science": 111.20732893720552,
+      "grand_tour_bonus": 1.0,
+      "time_bonus": 1.0,
+      "by_body": {
+        "5": 2.2834487163729547,
+        "8": 10.575394483480425,
+        "9": 36.197562114156554,
+        "10": 62.15092362319559
+      },
+      "total": 111.20732893720552
+    },
+    "metrics": {
+      "segments": 6,
+      "max_position_residual_km": 0.028074190339361614,
+      "max_velocity_residual_km_s": 4.647917566956231e-11,
+      "max_solver_position_difference_km": 0.003737223114104281,
+      "max_solver_velocity_difference_km_s": 1.2383383098560757e-09,
+      "flybys": 6,
+      "science_flybys": 6,
+      "initial_vx_km_s": 7.03054205032621,
+      "duration_seconds": 5027723312.693054,
+      "minimum_radius_au": 0.06384453815294605,
+      "first_perihelion_seconds": 4619389781.062218
+    },
+    "validation_seconds": 1.3015890419483185
+  },
+  "antipodes_submitted.csv": {
+    "artifact_sha256": "6297881d46e0e1ea238c1cd9a9f612b15ab2e4cb27c880383c41d429a6ad89b8",
+    "score_unit": "points",
+    "problem_revision": "gtoc13-conservative-v1",
+    "validator_revision": "074b1ca99f3fbaee40b9b546322dda02f8026d4ebe9ea46f9c1b2447d6283ada",
+    "validator_kind": "independent_conservative",
+    "score": null,
+    "status": "invalid",
+    "diagnostics": [
+      "RK4_ACCURACY [line 2]: velocity error=1.43375161e-07, permitted <9.14931911e-08; reduce the segment duration"
+    ],
+    "errors": [
+      {
+        "code": "RK4_ACCURACY",
+        "line": 2,
+        "message": "velocity error=1.43375161e-07, permitted <9.14931911e-08; reduce the segment duration"
+      }
+    ],
+    "validation_seconds": 0.19559029210358858
+  },
+  "antipodes_declared_encounters_only": {
+    "warning": "Diagnostic arithmetic only; trajectory NOT accepted and no benchmark score awarded.",
+    "flybys": 252,
+    "science_flybys": 133,
+    "breakdown": {
+      "science": 274.4429131566279,
+      "grand_tour_bonus": 1.2,
+      "time_bonus": 1.0,
+      "by_body": {
+        "1": 0.34289405891142566,
+        "2": 5.0246100948376835,
+        "3": 11.706647178208131,
+        "4": 1.0580838414521982,
+        "5": 17.796695132857334,
+        "6": 38.152209661094446,
+        "7": 62.27346045916774,
+        "8": 27.92356872415749,
+        "9": 18.959670344303184,
+        "10": 11.918445851469809,
+        "1000": 5.796959888926389,
+        "2002": 6.467917734522716,
+        "2003": 3.409292596061821,
+        "2006": 7.898716248402163,
+        "2009": 1.8721698766284443,
+        "2010": 3.4605100307552803,
+        "2011": 2.0127613024738022,
+        "2012": 1.5219093110917905,
+        "2016": 1.8062712931762657,
+        "2017": 3.2819479626715973,
+        "2019": 3.703774252204413,
+        "2023": 1.2461026060427962,
+        "2025": 1.7159703626327072,
+        "2028": 2.360912199185356,
+        "2030": 1.7360927381520026,
+        "2032": 2.6540313761158734,
+        "2034": 5.163928607546525,
+        "2037": 3.611438355760532,
+        "2039": 1.0637470830412348,
+        "2040": 5.312253040412235,
+        "2041": 5.089612777931714,
+        "2042": 8.100308166432805
+      },
+      "total": 329.3314957879535
+    }
+  }
+}

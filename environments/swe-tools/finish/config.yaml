@@ -1,0 +1,5 @@
+tools:
+  finish:
+    signature: "finish"
+    docstring: "End this run. Only candidates already sent with gtoc evaluate are scored."
+    arguments: []

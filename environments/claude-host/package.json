@@ -1,0 +1,5 @@
+{
+  "private": true,
+  "description": "Official Claude Code for subscription runs; authentication stays in the native client",
+  "dependencies": {"@anthropic-ai/claude-code": "2.1.308"}
+}

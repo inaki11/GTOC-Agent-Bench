@@ -1,0 +1,65 @@
+{
+  "id": "gtoc11",
+  "revision": "gtoc11-official-b1-v1",
+  "validator_kind": "official_binary_with_input_output_guards",
+  "received_from": "GTOC11 organizers, supplied by user",
+  "received_directory": "/Users/inaki/Downloads/Check Program/",
+  "integrated_on": "2026-11-03",
+  "time_bonus": 1.0,
+  "files": {
+    "PROVENANCE.md": {
+      "sha256": "8b3ec099f107b9a56af25b88c75b2a92d6333ede4770f7626a2f9df1531f26a7",
+      "bytes": 3141
+    },
+    "data/Candidate Asteroids.txt": {
+      "sha256": "04cd1b5590f120396c408613ae8c5ef9f96687d46fc169ab43060bb6440e4b4e",
+      "bytes": 8862855
+    },
+    "documents/README.md": {
+      "sha256": "f51f1098b33f1caa6bd249e32ca3146c821932f3b8cc47a146219b76f3500ca1",
+      "bytes": 1281
+    },
+    "instructions.md": {
+      "sha256": "f7f53a4ff9619a10860f63426618d7a7804cccbe07e435f91d060e19ae35bb40",
+      "bytes": 2297
+    },
+    "problem.yaml": {
+      "sha256": "e4d37e0326e76bf88b46c948a8149702f5c1a5481d970a7d33a71fc2e0b52581",
+      "bytes": 429
+    },
+    "statement.md": {
+      "sha256": "4b027f294f9c2af85347bcdf24acb4cba7192a87d7a57ad325c8765d161d07be",
+      "bytes": 6726
+    },
+    "submission-format.md": {
+      "sha256": "8d4b06efb9427a85678341756ce55c76c14695e4f30c19f75c20289971983180",
+      "bytes": 3508
+    },
+    "validation-policy.md": {
+      "sha256": "4252ce9285899d99ca2efa5812c4146dbdfbdddced332d9eba5973095f6f1b38",
+      "bytes": 4685
+    },
+    "validator/GTOC11Check_Linux": {
+      "sha256": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+      "bytes": 169880
+    },
+    "validator/README.md": {
+      "sha256": "d1fa5a69888ebea94b839ead737117722b93dceedd50985fc7afeb4add6f0a11",
+      "bytes": 593
+    }
+  },
+  "code_files": {
+    "src/gtoc_bench/gtoc11/__init__.py": {
+      "sha256": "7ca94da8845d1baa8f71e0c51963d1036916392f77daedfd643cda16826d802c",
+      "bytes": 229
+    },
+    "src/gtoc_bench/gtoc11/format.py": {
+      "sha256": "af03b41ced2f9ee590a4d38489c9d43a8322c1a484f987d9484bf61e10374835",
+      "bytes": 7729
+    },
+    "src/gtoc_bench/gtoc11/judge.py": {
+      "sha256": "2c39830aee3a2027a12d4d5552d8f76ac86780c28df86306307b102ef4323829",
+      "bytes": 8370
+    }
+  }
+}

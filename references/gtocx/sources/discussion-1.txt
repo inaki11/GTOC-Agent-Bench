@@ -1,0 +1,94 @@
+GTOCX - 
+
+Discussions
+GTOC X
+10th Global Trajectory Optimisation Competition
+(archived version of original website at gtocx.jpl.nasa.gov)
+Toggle navigation
+Home
+About
+Competition
+May 21, 2019, 8 p.m. UTC
+June 12, 2019, 8 p.m. UTC
+Timeline
+The competition is over.
+The Problem
+Data
+Solution Format & Submission Details
+Teams
+Announcements
+Teams' Solutions
+Leaderboard
+Discussion
+Discussion
+Problem Clarifications
+NablaZeroLabs
+Dear JPL,
+What is the index that corresponds to Sol in stars.txt?
+2019-05-15
+15:37
+Anastassios@JPL
+ZERO is the integer ID for Sol :)
+2019-05-15
+15:45
+NablaZeroLabs
+Sorry, I missed it in the problem description. I don't know how to read, but will settle the Milky Way nevertheless.
+2019-05-15
+15:53
+Anastassios@JPL
+Easy to miss if you are itching to settle the galaxy!  Looking forward to your Settlement Trees.
+2019-05-15
+17:26
+NablaZeroLabs
+Regarding the calculation of theta_f (last column in stars.txt).
+Could you comment on whether you generated that value in precision > double? Any info about language and compiler options used would be beneficial.
+The best I can do so far is replicating it to within  0.00037 for star 12,765:
+have evaluates to 107.69368029097959
+want evaluates to 107.69331481854125
+Thanks!
+2019-05-16
+15:23
+Anastassios@JPL
+Good point, Juan.  The theta_f in the stars.txt  was computed with higher precision values for the elements rather than the rounded values reported in the file.  Sorry for the confusion!  The worst error is for the star you noted (12,765).   The difference is too small to affect J in a meaningful way.
+To keep things simple, for purposes of evaluating the merit function J we will use the theta_f listed in stars.txt
+Teams should continue computing star states for use in the trajectory dynamics based on the elements R, i, Omega, phi as listed in the stars.txt file.
+Thanks!
+2019-05-16
+17:36
+liuhenry
+Yes, I also get theta_f = 107.69368029097959 for 12,765. The average error across all stars is 1.083e-5 degrees. Thanks for checking!
+2019-05-17
+00:23
+NablaZeroLabs
+Good to know we agree to the last decimal!
+2019-05-17
+18:59
+NASA
+|
+CALTECH
+|
+PRIVACY
+|
+IMAGE POLICY
+|
+FAQ
+|
+FEEDBACK
+Site Manager:
+Anastassios Petropoulos
+CL#: 19-2147
+var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//sophia.estec.esa.int/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+jQuery(document).ready(function($) {
+    $(".link-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});

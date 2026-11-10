@@ -1,0 +1,30 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: claude_code
+  version: 2.1.308
+model:
+  id: claude-opus-5-5
+  reasoning: max
+  max_output_tokens: 128000
+provider:
+  id: anthropic
+  protocol: anthropic
+  auth_method: claude_subscription
+  profile: default
+  auth_dir: ~/.config/gtoc-bench/claude-code
+environment:
+  image: localhost/gtoc-bench:claude-opus55-dilithium
+hardware:
+  cpus: 32
+  concurrent_with: 20261030T175140-420e4eb6e6c5
+  gpus: none
+  workspace_gb: 8
+budget:
+  wall_seconds: 28800
+  token_limit: null
+recovery:
+  clock_policy: continuous_wall
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

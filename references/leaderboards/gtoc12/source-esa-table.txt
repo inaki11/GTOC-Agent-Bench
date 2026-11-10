@@ -1,0 +1,30 @@
+Team  | N ship, N ast  | Score
+ |  | 
+Jet Propulsion Laboratory  | 35, 313  | 22532.672
+BIT-CAS-DFH  | 30, 237  | 17727.638
+OptimiCS  | 29, 236  | 17081.861
+ESA’s Advanced Concepts Team & Friends  | 28, 249  | 15727.902
+TheAntipodes  | 27, 222  | 15488.896
+NUDT-LIPSAM  | 27, 217  | 15160.946
+∑ TEAM  | 26, 203  | 14714.133
+ATQ  | 22, 175  | 13105.762
+ADL  | 22, 165  | 12061.842
+NUAA-ASTL  | 20, 161  | 10667.468
+The Aerospace Corporation  | 15, 105  | 7564.953
+vacuum cleaner could do better  | 12, 74  | 5354.313
+The Mean Anomalies  | 12, 75  | 4572.753
+HIT  | 10, 51  | 4036.698
+Set sail in space  | 10, 60  | 4003.728
+Team Jena  | 10, 41  | 3584.491
+NJU-LESEC-DSEL  | 8, 31  | 2442.396
+Dust  | 5, 15  | 1264.547
+Hit-anobody  | 4, 8  | 707.432
+ACELab  | 3, 9  | 627.022
+SPACE WALKER  | 3, 6  | 449.002
+SYS1101  | 3, 3  | 354.552
+Matabiau Space Center  | 3, 3  | 334.835
+NPU&Microsat deep space team  | 3, 4  | 332.525
+SCUAA-Kongtian Chongya Team  | 3, 3  | 277.857
+Toso & Herrera  | 2, 3  | 192.214
+ARIS  | 1, 1  | 115.784
+Yanqi_6  | 2, 1  | 88.016

@@ -1,0 +1,522 @@
+{
+  "schema_version": 1,
+  "problem": "gtoc11",
+  "score_unit": "points",
+  "captured_at_utc": "2026-11-03T13:45:28Z",
+  "source_url": "https://sophia.estec.esa.int/gtoc_portal/?page_id=1444",
+  "kind": "derived_without_time_bonus_approximate",
+  "time_bonus": 1,
+  "normalization": {
+    "submission_open_utc": "2021-10-17T12:00:00Z",
+    "competition_end_utc": "2021-11-07T12:00:00Z",
+    "timeline_source_url": "https://groups.google.com/g/gtoc_competition/c/VpCF-OOedC4",
+    "time_bonus_rule": "B = 2 - sqrt(1 - ((end-submission)/(end-start))^3)",
+    "time_bonus_source_url": "https://sophia.estec.esa.int/gtoc_portal/wp-content/uploads/2021/12/gtoc11_problem_stmt.pdf",
+    "timestamp_resolution_seconds": 60,
+    "post_close_display_policy": "Keep published timestamps; clamp B to 1 after close for the approximate normalization only.",
+    "all_rows_method": "Approximate from displayed score and best-submission UTC. Exact team submissions are not identified."
+  },
+  "precision_note": "Displayed scores have three decimals and timestamps have minute resolution. These are the same retained final entries, not each team's best among all attempts at B=1. No exact team submissions are asserted. The Iowa State timestamp is four minutes beyond closure; it is retained and B is clamped to 1 for that approximate row.",
+  "entries": [
+    {
+      "official_rank": 1,
+      "team": "TsinghuaLAD&509",
+      "best_submission_utc": "2021-11-07T11:10:00Z",
+      "best_submission_as_published": "Nov 07, 2021 11:10 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.81364e+15",
+      "minimum_station_mass_kg": 1813640000000000.0,
+      "transferred_asteroids": 388,
+      "official_score": 8443.63,
+      "published_score_text": "8443.630",
+      "score_b1_estimate": 8443.62998092,
+      "time_bonus_estimate": 1.00000000226,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        8443.62948092,
+        8443.63048204
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 1
+    },
+    {
+      "official_rank": 2,
+      "team": "ACT&Friends",
+      "best_submission_utc": "2021-11-06T18:46:00Z",
+      "best_submission_as_published": "Nov 06, 2021 6:46 PM UTC",
+      "minimum_station_mass_kg_as_published": "2.0125e+15",
+      "minimum_station_mass_kg": 2012500000000000.0,
+      "transferred_asteroids": 301,
+      "official_score": 6359.724,
+      "published_score_text": "6359.724",
+      "score_b1_estimate": 6359.59687815,
+      "time_bonus_estimate": 1.000019988978,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        6359.59637816,
+        6359.59774661
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 2
+    },
+    {
+      "official_rank": 3,
+      "team": "theAntipodes",
+      "best_submission_utc": "2021-11-07T08:14:00Z",
+      "best_submission_as_published": "Nov 07, 2021 8:14 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.27672e+15",
+      "minimum_station_mass_kg": 1276720000000000.0,
+      "transferred_asteroids": 293,
+      "official_score": 5992.298,
+      "published_score_text": "5992.298",
+      "score_b1_estimate": 5992.29674933,
+      "time_bonus_estimate": 1.000000208713,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        5992.29624933,
+        5992.29726586
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 3
+    },
+    {
+      "official_rank": 4,
+      "team": "UT Austin",
+      "best_submission_utc": "2021-11-07T06:48:00Z",
+      "best_submission_as_published": "Nov 07, 2021 6:48 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.13283e+15",
+      "minimum_station_mass_kg": 1132830000000000.0,
+      "transferred_asteroids": 235,
+      "official_score": 5885.469,
+      "published_score_text": "5885.469",
+      "score_b1_estimate": 5885.46576801,
+      "time_bonus_estimate": 1.000000549147,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        5885.46526801,
+        5885.46629899
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 4
+    },
+    {
+      "official_rank": 5,
+      "team": "ASRL",
+      "best_submission_utc": "2021-11-07T04:43:00Z",
+      "best_submission_as_published": "Nov 07, 2021 4:43 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.10046e+15",
+      "minimum_station_mass_kg": 1100460000000000.0,
+      "transferred_asteroids": 209,
+      "official_score": 5525.389,
+      "published_score_text": "5525.389",
+      "score_b1_estimate": 5525.38066258,
+      "time_bonus_estimate": 1.000001508931,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        5525.38016258,
+        5525.38121969
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 5
+    },
+    {
+      "official_rank": 6,
+      "team": "The Eccentric Anomalies",
+      "best_submission_utc": "2021-11-07T11:39:00Z",
+      "best_submission_as_published": "Nov 07, 2021 11:39 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.89224e+15",
+      "minimum_station_mass_kg": 1892240000000000.0,
+      "transferred_asteroids": 346,
+      "official_score": 5487.543,
+      "published_score_text": "5487.543",
+      "score_b1_estimate": 5487.54299908,
+      "time_bonus_estimate": 1.000000000167,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        5487.54249908,
+        5487.54349921
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 6
+    },
+    {
+      "official_rank": 7,
+      "team": "HIT",
+      "best_submission_utc": "2021-11-06T00:28:00Z",
+      "best_submission_as_published": "Nov 06, 2021 12:28 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.08546e+15",
+      "minimum_station_mass_kg": 1085460000000000.0,
+      "transferred_asteroids": 250,
+      "official_score": 5208.346,
+      "published_score_text": "5208.346",
+      "score_b1_estimate": 5207.43346816,
+      "time_bonus_estimate": 1.00017523639,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        5207.43296824,
+        5207.4352514
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 7
+    },
+    {
+      "official_rank": 8,
+      "team": "GHWZZ",
+      "best_submission_utc": "2021-11-07T10:47:00Z",
+      "best_submission_as_published": "Nov 07, 2021 10:47 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.50229e+15",
+      "minimum_station_mass_kg": 1502290000000000.0,
+      "transferred_asteroids": 294,
+      "official_score": 4794.469,
+      "published_score_text": "4794.469",
+      "score_b1_estimate": 4794.46896628,
+      "time_bonus_estimate": 1.000000007034,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        4794.46846628,
+        4794.46946764
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 8
+    },
+    {
+      "official_rank": 9,
+      "team": "ASTL-NUAA",
+      "best_submission_utc": "2021-11-07T00:08:00Z",
+      "best_submission_as_published": "Nov 07, 2021 12:08 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.03068e+15",
+      "minimum_station_mass_kg": 1030680000000000.0,
+      "transferred_asteroids": 213,
+      "official_score": 3735.16,
+      "published_score_text": "3735.160",
+      "score_b1_estimate": 3735.13562344,
+      "time_bonus_estimate": 1.000006526285,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        3735.13512344,
+        3735.136226
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 9
+    },
+    {
+      "official_rank": 10,
+      "team": "Team_BIT&ITNS",
+      "best_submission_utc": "2021-11-07T11:26:00Z",
+      "best_submission_as_published": "Nov 07, 2021 11:26 AM UTC",
+      "minimum_station_mass_kg_as_published": "8.00267e+14",
+      "minimum_station_mass_kg": 800267000000000.0,
+      "transferred_asteroids": 199,
+      "official_score": 3532.704,
+      "published_score_text": "3532.704",
+      "score_b1_estimate": 3532.70399749,
+      "time_bonus_estimate": 1.000000000711,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        3532.70349749,
+        3532.7044977
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 10
+    },
+    {
+      "official_rank": 11,
+      "team": "Pursuance Team",
+      "best_submission_utc": "2021-11-07T10:38:00Z",
+      "best_submission_as_published": "Nov 07, 2021 10:38 AM UTC",
+      "minimum_station_mass_kg_as_published": "7.20367e+14",
+      "minimum_station_mass_kg": 720367000000000.0,
+      "transferred_asteroids": 157,
+      "official_score": 3277.996,
+      "published_score_text": "3277.996",
+      "score_b1_estimate": 3277.99596732,
+      "time_bonus_estimate": 1.000000009969,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        3277.99546732,
+        3277.9964685
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 11
+    },
+    {
+      "official_rank": 12,
+      "team": "DLR",
+      "best_submission_utc": "2021-11-07T07:21:00Z",
+      "best_submission_as_published": "Nov 07, 2021 7:21 AM UTC",
+      "minimum_station_mass_kg_as_published": "9.00578e+14",
+      "minimum_station_mass_kg": 900578000000000.0,
+      "transferred_asteroids": 133,
+      "official_score": 3249.374,
+      "published_score_text": "3249.374",
+      "score_b1_estimate": 3249.37272404,
+      "time_bonus_estimate": 1.000000392679,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        3249.37222404,
+        3249.37323771
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 12
+    },
+    {
+      "official_rank": 13,
+      "team": "IDRL & ECNS",
+      "best_submission_utc": "2021-11-07T11:39:00Z",
+      "best_submission_as_published": "Nov 07, 2021 11:39 AM UTC",
+      "minimum_station_mass_kg_as_published": "9.67251e+14",
+      "minimum_station_mass_kg": 967251000000000.0,
+      "transferred_asteroids": 160,
+      "official_score": 3223.901,
+      "published_score_text": "3223.901",
+      "score_b1_estimate": 3223.90099946,
+      "time_bonus_estimate": 1.000000000167,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        3223.90049946,
+        3223.90149953
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 13
+    },
+    {
+      "official_rank": 14,
+      "team": "BUAA_ADMLab",
+      "best_submission_utc": "2021-11-07T10:07:00Z",
+      "best_submission_as_published": "Nov 07, 2021 10:07 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.02691e+15",
+      "minimum_station_mass_kg": 1026910000000000.0,
+      "transferred_asteroids": 185,
+      "official_score": 2729.974,
+      "published_score_text": "2729.974",
+      "score_b1_estimate": 2729.97392878,
+      "time_bonus_estimate": 1.000000026089,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        2729.97342878,
+        2729.97443065
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 14
+    },
+    {
+      "official_rank": 15,
+      "team": "BUAA",
+      "best_submission_utc": "2021-11-07T10:21:00Z",
+      "best_submission_as_published": "Nov 07, 2021 10:21 AM UTC",
+      "minimum_station_mass_kg_as_published": "9.31363e+14",
+      "minimum_station_mass_kg": 931363000000000.0,
+      "transferred_asteroids": 174,
+      "official_score": 2622.122,
+      "published_score_text": "2622.122",
+      "score_b1_estimate": 2622.121954,
+      "time_bonus_estimate": 1.000000017544,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        2622.121454,
+        2622.12245538
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 15
+    },
+    {
+      "official_rank": 16,
+      "team": "TeamJena",
+      "best_submission_utc": "2021-11-06T01:23:00Z",
+      "best_submission_as_published": "Nov 06, 2021 1:23 AM UTC",
+      "minimum_station_mass_kg_as_published": "5.9348e+14",
+      "minimum_station_mass_kg": 593480000000000.0,
+      "transferred_asteroids": 138,
+      "official_score": 2376.26,
+      "published_score_text": "2376.260",
+      "score_b1_estimate": 2375.87506011,
+      "time_bonus_estimate": 1.000162020257,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        2375.87456019,
+        2375.87611572
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 16
+    },
+    {
+      "official_rank": 17,
+      "team": "AU-LU",
+      "best_submission_utc": "2021-11-07T09:46:00Z",
+      "best_submission_as_published": "Nov 07, 2021 9:46 AM UTC",
+      "minimum_station_mass_kg_as_published": "5.49777e+14",
+      "minimum_station_mass_kg": 549777000000000.0,
+      "transferred_asteroids": 148,
+      "official_score": 1556.591,
+      "published_score_text": "1556.591",
+      "score_b1_estimate": 1556.59093228,
+      "time_bonus_estimate": 1.000000043505,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        1556.59043228,
+        1556.59143379
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 17
+    },
+    {
+      "official_rank": 18,
+      "team": "The Aerospace Corporation",
+      "best_submission_utc": "2021-11-07T09:17:00Z",
+      "best_submission_as_published": "Nov 07, 2021 9:17 AM UTC",
+      "minimum_station_mass_kg_as_published": "4.07086e+14",
+      "minimum_station_mass_kg": 407086000000000.0,
+      "transferred_asteroids": 71,
+      "official_score": 694.958,
+      "published_score_text": "694.958",
+      "score_b1_estimate": 694.95794558,
+      "time_bonus_estimate": 1.000000078305,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        694.95744558,
+        694.95844658
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 18
+    },
+    {
+      "official_rank": 19,
+      "team": "ACSER",
+      "best_submission_utc": "2021-11-07T06:31:00Z",
+      "best_submission_as_published": "Nov 07, 2021 6:31 AM UTC",
+      "minimum_station_mass_kg_as_published": "8.82037e+13",
+      "minimum_station_mass_kg": 88203700000000.0,
+      "transferred_asteroids": 12,
+      "official_score": 250.95,
+      "published_score_text": "250.950",
+      "score_b1_estimate": 250.94983842,
+      "time_bonus_estimate": 1.000000643891,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        250.94933842,
+        250.95033988
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 19
+    },
+    {
+      "official_rank": 20,
+      "team": "Iowa State University",
+      "best_submission_utc": "2021-11-07T12:04:00Z",
+      "best_submission_as_published": "Nov 07, 2021 12:04 PM UTC",
+      "minimum_station_mass_kg_as_published": "1.07086e+14",
+      "minimum_station_mass_kg": 107086000000000.0,
+      "transferred_asteroids": 51,
+      "official_score": 150.873,
+      "published_score_text": "150.873",
+      "score_b1_estimate": 150.873,
+      "time_bonus_estimate": 1.0,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        150.8725,
+        150.8735
+      ],
+      "displayed_after_competition_close": true,
+      "approximate_rank": 20
+    },
+    {
+      "official_rank": 21,
+      "team": "ALICE",
+      "best_submission_utc": "2021-10-28T08:27:00Z",
+      "best_submission_as_published": "Oct 28, 2021 8:27 AM UTC",
+      "minimum_station_mass_kg_as_published": "1.0712e+14",
+      "minimum_station_mass_kg": 107120000000000.0,
+      "transferred_asteroids": 12,
+      "official_score": 135.021,
+      "published_score_text": "135.021",
+      "score_b1_estimate": 127.60587053,
+      "time_bonus_estimate": 1.058109626438,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        127.60539799,
+        127.60782606
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 21
+    },
+    {
+      "official_rank": 22,
+      "team": "Space Buffaloes",
+      "best_submission_utc": "2021-11-01T14:01:00Z",
+      "best_submission_as_published": "Nov 01, 2021 2:01 PM UTC",
+      "minimum_station_mass_kg_as_published": "6.07828e+12",
+      "minimum_station_mass_kg": 6078280000000.0,
+      "transferred_asteroids": 12,
+      "official_score": 55.398,
+      "published_score_text": "55.398",
+      "score_b1_estimate": 54.78214628,
+      "time_bonus_estimate": 1.01124186915,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        54.78165184,
+        54.78285638
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 22
+    },
+    {
+      "official_rank": 23,
+      "team": "ASFC-BUAA",
+      "best_submission_utc": "2021-11-04T19:43:00Z",
+      "best_submission_as_published": "Nov 04, 2021 7:43 PM UTC",
+      "minimum_station_mass_kg_as_published": "2.83589e+13",
+      "minimum_station_mass_kg": 28358900000000.0,
+      "transferred_asteroids": 12,
+      "official_score": 13.962,
+      "published_score_text": "13.962",
+      "score_b1_estimate": 13.94752242,
+      "time_bonus_estimate": 1.00103800398,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        13.94702293,
+        13.94803315
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 23
+    },
+    {
+      "official_rank": 24,
+      "team": "HGD7",
+      "best_submission_utc": "2021-11-03T11:20:00Z",
+      "best_submission_as_published": "Nov 03, 2021 11:20 AM UTC",
+      "minimum_station_mass_kg_as_published": "0",
+      "minimum_station_mass_kg": 0.0,
+      "transferred_asteroids": 5,
+      "official_score": 0.0,
+      "published_score_text": "0.000",
+      "score_b1_estimate": 0.0,
+      "time_bonus_estimate": 1.003534082794,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        0.0,
+        0.00049824
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 24
+    },
+    {
+      "official_rank": 25,
+      "team": "fire",
+      "best_submission_utc": "2021-11-05T05:24:00Z",
+      "best_submission_as_published": "Nov 05, 2021 5:24 AM UTC",
+      "minimum_station_mass_kg_as_published": "0",
+      "minimum_station_mass_kg": 0.0,
+      "transferred_asteroids": 0,
+      "official_score": 0.0,
+      "published_score_text": "0.000",
+      "score_b1_estimate": 0.0,
+      "time_bonus_estimate": 1.000635908208,
+      "normalization_method": "official_score_divided_by_bonus_at_published_best_submission",
+      "score_b1_display_uncertainty_interval": [
+        0.0,
+        0.00049968
+      ],
+      "displayed_after_competition_close": false,
+      "approximate_rank": 25
+    }
+  ]
+}

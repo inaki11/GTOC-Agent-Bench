@@ -1,0 +1,16 @@
+id: gtoc13
+revision: gtoc13-reconstructed-controls-v2
+objective: maximize
+score_unit: points
+baseline_score: 0
+time_bonus: 1.0
+validator_kind: independent_reconstructed_controls
+control_interpolation: reconstructed_normalized_quadratic
+sail_validation: published_local_relative_tolerance
+max_submission_bytes: 100000000
+max_submission_rows: 500000
+validation_timeout_seconds: 600
+max_pending_evaluations: 1
+statement: statement.md
+submission_format: submission-format.md
+validation_policy: validation-policy.md

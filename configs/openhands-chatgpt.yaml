@@ -1,0 +1,28 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: openhands
+  version: 1.16.0
+model:
+  id: gpt-6-luna
+  reasoning: low
+provider:
+  id: openai
+  protocol: chat_completions
+  base_url: https://api.openai.com/v1
+  auth_method: chatgpt
+  profile: default
+  auth_dir: ~/.config/gtoc-bench/auth
+environment:
+  image: auto
+hardware:
+  gpus: auto
+  workspace_gb: 8
+budget:
+  wall_seconds: 3600
+  token_limit: 100000
+recovery:
+  clock_policy: provider_wait
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

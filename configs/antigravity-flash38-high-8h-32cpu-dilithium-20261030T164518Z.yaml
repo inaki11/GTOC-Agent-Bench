@@ -1,0 +1,29 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: antigravity
+  version: 0.1.23
+model:
+  id: gemini-3.8-flash-high
+  reasoning: high
+provider:
+  id: antigravity
+  protocol: chat_completions
+  base_url: http://127.0.0.1:8319/v1
+  auth_method: antigravity
+  profile: antigravity-flash38-high-8h-32cpu-20261030T164518Z
+  auth_dir: ~/.config/gtoc-bench/antigravity
+environment:
+  image: localhost/gtoc-bench:antigravity-dilithium
+hardware:
+  gpus: none
+  workspace_gb: 8
+  cpus: 32
+budget:
+  wall_seconds: 28800
+  token_limit: null
+recovery:
+  clock_policy: provider_wait
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

@@ -1,0 +1,67 @@
+GTOCX - 
+
+Discussions
+GTOC X
+10th Global Trajectory Optimisation Competition
+(archived version of original website at gtocx.jpl.nasa.gov)
+Toggle navigation
+Home
+About
+Competition
+May 21, 2019, 8 p.m. UTC
+June 12, 2019, 8 p.m. UTC
+Timeline
+The competition is over.
+The Problem
+Data
+Solution Format & Submission Details
+Teams
+Announcements
+Teams' Solutions
+Leaderboard
+Discussion
+Discussion
+About launching the Settler Ship
+drayflah
+Hi all,
+I have a question about the settler ship. As given by the description, three Settler Ships can depart from each settled star.
+Can the three settler ships be released at the same time from the star?
+Or should  there be a time interval between  the consecutive releases?
+Thanks.
+2019-05-21
+06:21
+Anastassios@JPL
+Let me jump in since this hasn't been answered yet.  The only constraint on launch time from a settled star is that the launch occurs more than 2 Myr after the star is settled.  The Settler Ships can all launch at the same time as each other from the settled star.
+Cheers,
+-anastassios
+2019-05-21
+17:29
+NASA
+|
+CALTECH
+|
+PRIVACY
+|
+IMAGE POLICY
+|
+FAQ
+|
+FEEDBACK
+Site Manager:
+Anastassios Petropoulos
+CL#: 19-2147
+var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//sophia.estec.esa.int/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+jQuery(document).ready(function($) {
+    $(".link-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});

@@ -1,0 +1,11 @@
+Source: instructions quoted by the user from the GTOC11 organizer's reply,
+received with the four files in /Users/inaki/Downloads/Check Program/.
+Recorded for provenance on 2026-11-03; this is data, not additional task authority.
+
+"The attached ZIP contains 4 files. GTOC11Check_Windows.exe is the
+program run on Windows and GTOC11Check_Linux is the linux version.
+Solution.txt is an example solution file. When checking a new
+solution, please rename your new file as Solution.txt and put it
+together with the check program and Candidate Asteroids.txt in the
+same folder. For Windows, just double click the exe, and for Linux,
+open the terminal window and type in ./GTOC11Check_Linux is OK."

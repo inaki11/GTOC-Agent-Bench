@@ -1,0 +1,26 @@
+{
+  "checked_at": "2026-11-04",
+  "cliproxyapi": {
+    "version": "8.0.54",
+    "source": "https://github.com/router-for-me/CLIProxyAPI/releases/tag/v8.0.54",
+    "experimental": true,
+    "archives": {
+      "Darwin-arm64": {
+        "name": "CLIProxyAPI_8.0.54_darwin_aarch64.tar.gz",
+        "sha256": "02d771a68cdf9978821f01c85c6585db708f1da0f33f85947afc0b5b07b90951"
+      },
+      "Darwin-x86_64": {
+        "name": "CLIProxyAPI_8.0.54_darwin_amd64.tar.gz",
+        "sha256": "60e3d64af5a25566b3a7aa50cf677178b4b826263cb963ccea218d34d49fa163"
+      },
+      "Linux-aarch64": {
+        "name": "CLIProxyAPI_8.0.54_linux_aarch64_no-plugin.tar.gz",
+        "sha256": "a1d6c5f3b98560c4636da853c563bc7494b51e4a4253d72bb9196265ab2a7965"
+      },
+      "Linux-x86_64": {
+        "name": "CLIProxyAPI_8.0.54_linux_amd64_no-plugin.tar.gz",
+        "sha256": "c7155bce78c202e701e12353e0f742f98ea674b824e28bc1d651c64e444991eb"
+      }
+    }
+  }
+}

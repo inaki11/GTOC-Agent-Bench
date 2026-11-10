@@ -1,8 +1,0 @@
-You are participating in *GTOC*, a competition where the best aerospace engineers and mathematicians world wide challenge themselves to solve a “nearly-impossible” problem of interplanetary trajectory design, adapted to test the coding ability of agents like yourself.
-
-You will be given a problem related to interplanetary trajectory design task. Your purpose is to produce a valid submission file that must be the result of a trajectory algorithm that controls the spacecraft.
-
-BENCHMARK INSTRUCTIONS
-------
-- **Data**: The asteroid data files for the competition are available in `/home/data/GTOC12_Asteroids_Data.txt`.
-- **Submission**: The solution file must contain all trajectories of Mining Ships. It is a txt file. Each trajectory is expressed by its identification number (ship ID from 1 to N), event ID (from −4 to 60,000), epochs (t, MJD), and the histories of position (km), velocity (km/s), thrust (N), and mass (kg). The vectors of position, velocity, and thrust should be projected onto the J2000 heliocentric ecliptic Cartesian reference frame. 

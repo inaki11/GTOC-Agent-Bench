@@ -1,0 +1,30 @@
+# Leaderboard GTOC11
+# Source: https://sophia.estec.esa.int/gtoc_portal/?page_id=1444
+# Captured 2026-11-03 through indexed web-search extraction, not direct HTML.
+# Displayed timestamps explicitly say UTC. Scores retain three displayed decimals.
+Team | Best Submission | Mmin, N | Score
+TsinghuaLAD&509 | Nov 07, 2021 11:10 AM UTC | 1.81364e+15, 388 | 8443.630
+ACT&Friends | Nov 06, 2021 6:46 PM UTC | 2.0125e+15, 301 | 6359.724
+theAntipodes | Nov 07, 2021 8:14 AM UTC | 1.27672e+15, 293 | 5992.298
+UT Austin | Nov 07, 2021 6:48 AM UTC | 1.13283e+15, 235 | 5885.469
+ASRL | Nov 07, 2021 4:43 AM UTC | 1.10046e+15, 209 | 5525.389
+The Eccentric Anomalies | Nov 07, 2021 11:39 AM UTC | 1.89224e+15, 346 | 5487.543
+HIT | Nov 06, 2021 12:28 AM UTC | 1.08546e+15, 250 | 5208.346
+GHWZZ | Nov 07, 2021 10:47 AM UTC | 1.50229e+15, 294 | 4794.469
+ASTL-NUAA | Nov 07, 2021 12:08 AM UTC | 1.03068e+15, 213 | 3735.160
+Team_BIT&ITNS | Nov 07, 2021 11:26 AM UTC | 8.00267e+14, 199 | 3532.704
+Pursuance Team | Nov 07, 2021 10:38 AM UTC | 7.20367e+14, 157 | 3277.996
+DLR | Nov 07, 2021 7:21 AM UTC | 9.00578e+14, 133 | 3249.374
+IDRL & ECNS | Nov 07, 2021 11:39 AM UTC | 9.67251e+14, 160 | 3223.901
+BUAA_ADMLab | Nov 07, 2021 10:07 AM UTC | 1.02691e+15, 185 | 2729.974
+BUAA | Nov 07, 2021 10:21 AM UTC | 9.31363e+14, 174 | 2622.122
+TeamJena | Nov 06, 2021 1:23 AM UTC | 5.9348e+14, 138 | 2376.260
+AU-LU | Nov 07, 2021 9:46 AM UTC | 5.49777e+14, 148 | 1556.591
+The Aerospace Corporation | Nov 07, 2021 9:17 AM UTC | 4.07086e+14, 71 | 694.958
+ACSER | Nov 07, 2021 6:31 AM UTC | 8.82037e+13, 12 | 250.950
+Iowa State University | Nov 07, 2021 12:04 PM UTC | 1.07086e+14, 51 | 150.873
+ALICE | Oct 28, 2021 8:27 AM UTC | 1.0712e+14, 12 | 135.021
+Space Buffaloes | Nov 01, 2021 2:01 PM UTC | 6.07828e+12, 12 | 55.398
+ASFC-BUAA | Nov 04, 2021 7:43 PM UTC | 2.83589e+13, 12 | 13.962
+HGD7 | Nov 03, 2021 11:20 AM UTC | 0, 5 | 0.000
+fire | Nov 05, 2021 5:24 AM UTC | 0, 0 | 0.000

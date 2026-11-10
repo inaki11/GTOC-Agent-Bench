@@ -1,0 +1,10 @@
+name: science
+channels:
+  - conda-forge
+dependencies:
+  - python=3.12
+  - pip=25.2
+  - numpy=2.2.6
+  - scipy=1.16.2
+  - pykep=3.0.0
+  - ipopt=3.14.19

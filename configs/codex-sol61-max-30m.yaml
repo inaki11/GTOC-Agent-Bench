@@ -1,0 +1,28 @@
+schema_version: 1
+purpose: development
+problem: gtoc12
+agent:
+  id: codex
+  version: 0.164.0
+model:
+  id: gpt-6.1-sol
+  reasoning: max
+provider:
+  id: openai
+  protocol: responses
+  base_url: https://api.openai.com/v1
+  auth_method: chatgpt
+  profile: default
+  auth_dir: ~/.config/gtoc-bench/auth
+environment:
+  image: gtoc-bench:phase1-cpu-qemu
+hardware:
+  gpus: none
+  workspace_gb: 8
+budget:
+  wall_seconds: 1800
+  token_limit: null
+recovery:
+  clock_policy: provider_wait
+  max_transient_retries: 2
+  max_retry_wait_seconds: 120

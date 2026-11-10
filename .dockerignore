@@ -1,3 +1,13 @@
-/data/
-/*runs/
-/runs*/
+*
+!src/
+!src/**
+!problems/
+!problems/**
+!environments/
+!environments/**
+!pyproject.toml
+**/__pycache__/
+**/*.pyc
+
+# Official leaderboards are host-side benchmark references, never agent inputs.
+references/

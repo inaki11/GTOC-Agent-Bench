@@ -1,0 +1,77 @@
+{
+  "id": "gtocx",
+  "revision": "gtocx-independent-v1",
+  "validator_kind": "independent_conservative",
+  "files": {
+    "PROVENANCE.md": {
+      "sha256": "418541133776db75e5e706b217f2ab181d5291380a73e798767e6f2e732bb3aa",
+      "bytes": 2037
+    },
+    "clarifications.md": {
+      "sha256": "78eda6b524c44f1875032b64132638ea42c3dcf5a0973da92d298ca554bb8198",
+      "bytes": 2577
+    },
+    "data/stars.txt": {
+      "sha256": "c799efb27bb8611b7b3b6b759229e9d0b2f029425a8afa8a263af176a15cef1f",
+      "bytes": 7900158
+    },
+    "documents/gtocX_problem_stmt.pdf": {
+      "sha256": "3cff9c115be3167020e61c483444ab759d032d463cb3c1c1b5579f8957a11f81",
+      "bytes": 748681
+    },
+    "documents/gtocX_submission_format.pdf": {
+      "sha256": "b3e78222175a565c1b32beba0413a1969543b559c2a6d00728553cc69c60bdf7",
+      "bytes": 217689
+    },
+    "instructions.md": {
+      "sha256": "3468db89d382ba3ac92372f1bd170ed02a11db2d62b3b5871e6751ec7d4e0e70",
+      "bytes": 4056
+    },
+    "problem.yaml": {
+      "sha256": "f6cc51a7cade5c8ed0365e28dfbead37dc888fd2ac2042effcca7d860486460e",
+      "bytes": 412
+    },
+    "statement.md": {
+      "sha256": "d466af9c7835a9bd555586620b714c9d438257331e1d2a7b93814d79391ad45b",
+      "bytes": 6720
+    },
+    "submission-format.md": {
+      "sha256": "966ee82f6b746c7e4c47d42e446316f7cbf14237322eb28d5d7cffabd362c1d8",
+      "bytes": 3262
+    },
+    "validation-policy.md": {
+      "sha256": "1c9bfad329126709ecf2b4e1628e0a188abcf82b140a80f06e52138347d902be",
+      "bytes": 4922
+    },
+    "validator/GTOCX_Verify": {
+      "sha256": "cc721d91065f06885eee12c324db06bb3382dae46f42f6bc4019ee071d7b2908",
+      "bytes": 155
+    },
+    "validator/README.md": {
+      "sha256": "def6695b471a90337e34656c0b84173d06abdcfa951748bd41dc4e1b89d8bfcc",
+      "bytes": 570
+    }
+  },
+  "code_files": {
+    "src/gtoc_bench/gtocx/__init__.py": {
+      "sha256": "ff4b5287004d9d3661442b5bb75255d78fa6ef3ba43ac531b0617c968cd82284",
+      "bytes": 217
+    },
+    "src/gtoc_bench/gtocx/__main__.py": {
+      "sha256": "82d1a28fe1c70d3fb7aa7db223af1a2cc90ad9c475b7f5844e4917c01a1cc72c",
+      "bytes": 1240
+    },
+    "src/gtoc_bench/gtocx/format.py": {
+      "sha256": "f1676e8920f2e0e640052338abefabede93e301e089403e1970d2bc81f42b340",
+      "bytes": 11383
+    },
+    "src/gtoc_bench/gtocx/judge.py": {
+      "sha256": "f7aa5f88b90933acf9999188d36f4215fc6d8e2aa45af7f4fd5207592484d540",
+      "bytes": 19189
+    },
+    "src/gtoc_bench/gtocx/model.py": {
+      "sha256": "29b72e97849fc03609baf064bf9221036c2edb7c5b0309685d69d0808737b9d2",
+      "bytes": 2645
+    }
+  }
+}

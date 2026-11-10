@@ -1,0 +1,7 @@
+# Official stable releases. SWE-agent is pinned to its release commit, not the old PyPI package.
+openhands==1.16.0
+mini-swe-agent==2.4.6
+sweagent @ https://github.com/SWE-agent/SWE-agent/archive/0f3acafacabc0def8cc76b4e48acb4b6cf302cb9.tar.gz
+swe-rex==1.4.0
+# Exclude the withdrawn compromised releases; lock every transitive dependency below.
+litellm!=1.82.7,!=1.82.8

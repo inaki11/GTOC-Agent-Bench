@@ -1,0 +1,14 @@
+Source URL: https://sophia.estec.esa.int/gtoc_portal/wp-content/uploads/2021/12/gtoc11_problem_stmt.pdf
+Capture method: indexed text returned by web search on 2026-11-03. Not a direct
+PDF download. The index identifies a final statement dated 16 October 2021.
+
+Final corrections and constants transcribed for verification:
+alpha = 6e-9 s^-1; ATD acceleration magnitude = 1e-4 m/s^2.
+mu = 1.32712440018e11 km^3/s^2; AU = 1.49597870691e8 km.
+Position, velocity and mass tolerances: 10 km, 0.01 m/s, 1 kg.
+Earth departure hyperbolic excess velocity is excluded from total ship Delta-V.
+At most four impulses on each leg, including Earth to the first asteroid.
+An ATD is used on only one asteroid and stops being usable on station arrival.
+
+This extract supplements the unchanged initial 10 October PDF retained here.
+It is not represented as a complete final PDF or a verbatim full transcription.

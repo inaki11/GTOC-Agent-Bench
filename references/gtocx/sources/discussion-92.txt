@@ -1,0 +1,70 @@
+GTOCX - 
+
+Discussions
+GTOC X
+10th Global Trajectory Optimisation Competition
+(archived version of original website at gtocx.jpl.nasa.gov)
+Toggle navigation
+Home
+About
+Competition
+May 21, 2019, 8 p.m. UTC
+June 12, 2019, 8 p.m. UTC
+Timeline
+The competition is over.
+The Problem
+Data
+Solution Format & Submission Details
+Teams
+Announcements
+Teams' Solutions
+Leaderboard
+Discussion
+Discussion
+Pod and Mothership maneuver spacing
+ali.rasoulzadeh
+There is a statement propulsive maneuver section that states:
+"A Settlement Pod's rendezvous impulse must also be separated by at least 1 Myr from any impulses performed by the Mother Ship"
+There is a small ambiguity:
+1) The Pod's rendezvous impulse must be separated by at least 1Myr just from preceding Mothership maneuver.
+2) The Pod's rendezvous impulse must be separated like that with "any" other Mothership maneuver (i.e. including the following Mothership maneuver).
+2019-05-26
+06:25
+ali.rasoulzadeh
+I mean, which one is correct.
+(and...sorry for grammar mistakes)
+2019-05-26
+06:29
+Anastassios@JPL
+When a Settlement Pod is released, you must check both the previous Mother Ship impulses and Pod releases, as well as the subsequent Mother Ship impulses and Pod releases.  Both the previous and the subsequent activities must obey the constraint of 1 Myr minimum time separation from that Settlement Pod release.  Hope this helps!
+2019-05-26
+11:11
+NASA
+|
+CALTECH
+|
+PRIVACY
+|
+IMAGE POLICY
+|
+FAQ
+|
+FEEDBACK
+Site Manager:
+Anastassios Petropoulos
+CL#: 19-2147
+var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//sophia.estec.esa.int/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+jQuery(document).ready(function($) {
+    $(".link-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});

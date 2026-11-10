@@ -1,0 +1,652 @@
+{
+  "problem": "gtoc11",
+  "checked_at_utc": "2026-11-03T13:55:19.911787+00:00",
+  "image": "gtoc-bench:gtoc11-cpu",
+  "image_id": "sha256:2e77a6419d3ad0560a6fa1d85bcc300b0a865e0f513c61092e16225b35570b75",
+  "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+  "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+  "valid_cases": 4,
+  "invalid_cases": 16,
+  "cases": [
+    {
+      "case": "complete_organizer_example",
+      "expected_status": "valid",
+      "verdict": {
+        "artifact_sha256": "f62eae63d5f23cfc9f76c45d4ff6b5494433911dc93e18059d51d5115b9e4cc9",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "valid",
+        "score": 1556.5911,
+        "diagnostics": [],
+        "native_status": 0,
+        "score_breakdown": {
+          "time_bonus": 1.0,
+          "minimum_station_mass_kg": 549777130818197.0,
+          "station_mass_kg": [
+            550521961067447.3,
+            550722034899665.6,
+            551229865281501.3,
+            553615828439213.8,
+            551259451646563.9,
+            549777130818197.0,
+            550553129106470.7,
+            549786549553606.9,
+            552709274324289.1,
+            549841244642390.3,
+            550857412718453.5,
+            550559878787008.0
+          ],
+          "dyson_radius_au": 1.16410197870057,
+          "mother_ship_delta_v_km_s": [
+            28.768529402642613,
+            29.385157243814497,
+            30.09120410792532,
+            31.64958146759476,
+            32.27775266661702,
+            27.641157631662796,
+            31.284202753493858,
+            30.845264258190653,
+            32.5975519179556,
+            32.50695947001884
+          ],
+          "delta_v_penalty": 26.063339920199628,
+          "independent_score_b1": 1556.5911158875317
+        },
+        "metrics": {
+          "transferred_asteroids": 148,
+          "flybys": 148,
+          "continuous_thrust_type": 1,
+          "rows": 203828
+        },
+        "stdout": "Extra Info:5.4977713e+14\t148\nScore:1556.5911\nStatus:0\n****************************************************************************\n\n\n",
+        "stderr": "",
+        "native_report": "5.49777e+14, 148\n1556.5911\n0\n",
+        "returncode": 0,
+        "validation_seconds": 5.992415335000032
+      }
+    },
+    {
+      "case": "derived_single_asteroid",
+      "expected_status": "valid",
+      "verdict": {
+        "artifact_sha256": "62568d7c4827197b7521228d6d597eb03cfaa466ee7c4b68862832a2e0096396",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "valid",
+        "score": 0.0,
+        "diagnostics": [],
+        "native_status": 0,
+        "score_breakdown": {
+          "time_bonus": 1.0,
+          "minimum_station_mass_kg": 0.0,
+          "station_mass_kg": [
+            0.0,
+            53306633401712.8,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "dyson_radius_au": 1.16410197870057,
+          "mother_ship_delta_v_km_s": [
+            7.654426817500651,
+            7.641839213532194,
+            8.98876775170265,
+            7.625108507673693,
+            5.601409059941499,
+            6.88645916553621,
+            9.557709823502904,
+            7.993444288006118,
+            8.993437413555577,
+            7.549736962087422
+          ],
+          "delta_v_penalty": 13.39083463955243,
+          "independent_score_b1": 0.0
+        },
+        "metrics": {
+          "transferred_asteroids": 1,
+          "flybys": 10,
+          "continuous_thrust_type": 1,
+          "rows": 1303
+        },
+        "stdout": "Extra Info:0\t1\nScore:0\nStatus:0\n****************************************************************************\n\n\n",
+        "stderr": "",
+        "native_report": "0, 1\n0\n0\n",
+        "returncode": 0,
+        "validation_seconds": 0.22515633400007573
+      }
+    },
+    {
+      "case": "empty_fleet_type_0",
+      "expected_status": "valid",
+      "verdict": {
+        "artifact_sha256": "06332fed2c11b5c7a1484caf440fa017103c355d1497ced6913e48e28dd55570",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "valid",
+        "score": 0.0,
+        "diagnostics": [],
+        "native_status": 0,
+        "score_breakdown": {
+          "time_bonus": 1.0,
+          "minimum_station_mass_kg": 0.0,
+          "station_mass_kg": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "dyson_radius_au": 1.1,
+          "mother_ship_delta_v_km_s": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "delta_v_penalty": 10.0,
+          "independent_score_b1": 0.0
+        },
+        "metrics": {
+          "transferred_asteroids": 0,
+          "flybys": 0,
+          "continuous_thrust_type": 0,
+          "rows": 12
+        },
+        "stdout": "Extra Info:0\t0\nScore:0\nStatus:0\n****************************************************************************\n\n\n",
+        "stderr": "",
+        "native_report": "0, 0\n0\n0\n",
+        "returncode": 0,
+        "validation_seconds": 0.19991291699989233
+      }
+    },
+    {
+      "case": "empty_fleet_type_1",
+      "expected_status": "valid",
+      "verdict": {
+        "artifact_sha256": "df371841e3a828e3cac2d552414faa664aa9264e622201269fb71d825907d725",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "valid",
+        "score": 0.0,
+        "diagnostics": [],
+        "native_status": 0,
+        "score_breakdown": {
+          "time_bonus": 1.0,
+          "minimum_station_mass_kg": 0.0,
+          "station_mass_kg": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "dyson_radius_au": 1.1,
+          "mother_ship_delta_v_km_s": [
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0,
+            0.0
+          ],
+          "delta_v_penalty": 10.0,
+          "independent_score_b1": 0.0
+        },
+        "metrics": {
+          "transferred_asteroids": 0,
+          "flybys": 0,
+          "continuous_thrust_type": 1,
+          "rows": 12
+        },
+        "stdout": "Extra Info:0\t0\nScore:0\nStatus:0\n****************************************************************************\n\n\n",
+        "stderr": "",
+        "native_report": "0, 0\n0\n0\n",
+        "returncode": 0,
+        "validation_seconds": 0.2016340410000339
+      }
+    },
+    {
+      "case": "wrong_earth_position",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "90f396e2f00673cf4662890369d8e058615ced004dd4f50c7dcdc399c5262331",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 2: R and V cannot match!"
+        ],
+        "stdout": "Line 2: R and V cannot match! \nExtra info:Line 2: R and V cannot match! \nScore:0\nStatus:-1\n****************************************************************************\n\nLine 2: R and V cannot match! \n\n",
+        "stderr": "",
+        "native_report": "Line 2: R and V cannot match! \n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.2225769169999694
+      }
+    },
+    {
+      "case": "departure_excess_over_6",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "74f9bb69e0f60ec911bc36c20cc0292b1dea0f5fbb8a3eb9cfd6eb94c113ceb0",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 2: Initial DV is too large! (Violates 6 km/s constraint)"
+        ],
+        "stdout": "Line 2: Initial DV is too large! (Violates 6 km/s constraint)\nExtra info:Line 2: Initial DV is too large! (Violates 6 km/s constraint)\nScore:0\nStatus:-1\n****************************************************************************\n\nLine 2: Initial DV is too large! (Violates 6 km/s constraint)\n\n",
+        "stderr": "",
+        "native_report": "Line 2: Initial DV is too large! (Violates 6 km/s constraint)\n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.3316314589999365
+      }
+    },
+    {
+      "case": "broken_impulsive_dynamics",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "8140fa23212eaac72af4d6f4999f4ff908a51bd506d7f41b76b94dbfaf3b9189",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 4: R and V cannot match!"
+        ],
+        "stdout": "Line 4: R and V cannot match!  \nExtra info:Line 4: R and V cannot match!  \nScore:0\nStatus:-1\n****************************************************************************\n\nLine 4: R and V cannot match!  \n\n",
+        "stderr": "",
+        "native_report": "Line 4: R and V cannot match!  \n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.22476483400009784
+      }
+    },
+    {
+      "case": "wrong_atd_acceleration",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "a1a39c5e5d12dabb998bce6fe168d588fe1f55cb05f6a763a68e240a70440d1f",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 44: The acceleartion is not 1e-4 m/s!"
+        ],
+        "stdout": "Line 44: The acceleartion is not 1e-4 m/s!  \nExtra info:Line 44: The acceleartion is not 1e-4 m/s!  \nScore:0\nStatus:-1\n****************************************************************************\n\nLine 44: The acceleartion is not 1e-4 m/s!  \n\n",
+        "stderr": "",
+        "native_report": "Line 44: The acceleartion is not 1e-4 m/s!  \n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.3421655419999752
+      }
+    },
+    {
+      "case": "wrong_arrival_mass",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "171fb0d11df13f8aa16c0a19b08594d64a1300d69e556da9c628fa7d79420c83",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 1303: Mass cannot match!"
+        ],
+        "stdout": "Line 1303: Mass cannot match!  \nExtra info:Line 1303: Mass cannot match!  \nScore:0\nStatus:-1\n****************************************************************************\n\nLine 1303: Mass cannot match!  \n\n",
+        "stderr": "",
+        "native_report": "Line 1303: Mass cannot match!  \n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.3490139589998762
+      }
+    },
+    {
+      "case": "wrong_station_arrival_position",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "b7607b25493e41fadfab2846d0a622e14c985054374657278bc6b66f94fd6c50",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 1303: R and V cannot match!"
+        ],
+        "stdout": "Line 1303: R and V cannot match!  \nExtra info:Line 1303: R and V cannot match!  \nScore:0\nStatus:-1\n****************************************************************************\n\nLine 1303: R and V cannot match!  \n\n",
+        "stderr": "",
+        "native_report": "Line 1303: R and V cannot match!  \n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.2931324169999243
+      }
+    },
+    {
+      "case": "wrong_station_arrival_velocity",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "73c8c0839d13d743aac309c9d8f758eb028bf8915bea3d304cb548b59d417ff5",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 1303: R and V cannot match!"
+        ],
+        "stdout": "Line 1303: R and V cannot match!  \nExtra info:Line 1303: R and V cannot match!  \nScore:0\nStatus:-1\n****************************************************************************\n\nLine 1303: R and V cannot match!  \n\n",
+        "stderr": "",
+        "native_report": "Line 1303: R and V cannot match!  \n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.2221985419998873
+      }
+    },
+    {
+      "case": "nonfinite_control",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "74a982630c1e4c3344404bc5504c2bc4ea443fe89370d374184df09c653b4627",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "NUMBER at line 44: Expected finite ASCII numbers"
+        ],
+        "errors": [
+          {
+            "code": "NUMBER",
+            "line": 44,
+            "message": "Expected finite ASCII numbers"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.002806375000091066
+      }
+    },
+    {
+      "case": "invalid_station",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "838acdb08fedc756c57fa8f5c3f902bae6c456f74d0f8aea03b0c842f8b582ff",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "RANGE at line 43: Station ID must be in [1, 12]"
+        ],
+        "errors": [
+          {
+            "code": "RANGE",
+            "line": 43,
+            "message": "Station ID must be in [1, 12]"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.0028648330001033173
+      }
+    },
+    {
+      "case": "invalid_ring_radius",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "32a61573c9445faf690e67c73f7d359888a4ad3d1da26b6c5a0e20843265806f",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "DYSON_RADIUS at line 41: The Dyson ring radius must be at least 0.65 AU"
+        ],
+        "errors": [
+          {
+            "code": "DYSON_RADIUS",
+            "line": 41,
+            "message": "The Dyson ring radius must be at least 0.65 AU"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.003129584000134855
+      }
+    },
+    {
+      "case": "invalid_control_type",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "ec29af1164b101151012a1b68e74dbca5300999707db390eaac4fa976a7f1ba6",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "RANGE at line 42: Continuous-thrust type must be in [0, 1]"
+        ],
+        "errors": [
+          {
+            "code": "RANGE",
+            "line": 42,
+            "message": "Continuous-thrust type must be in [0, 1]"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.002753457999915554
+      }
+    },
+    {
+      "case": "missing_trajectory_row",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "e0c9ed206a9c76fd5105562646eb53b6dcf6be4f7d7ec1899f4cd6e240894852",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "TRUNCATED at line 1304: A declared record is missing"
+        ],
+        "errors": [
+          {
+            "code": "TRUNCATED",
+            "line": 1304,
+            "message": "A declared record is missing"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.025278542000023663
+      }
+    },
+    {
+      "case": "activation_before_30_days",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "ae174c3720fbf112296f6099b38d6862d5ad47e5634b4bc338026a4cc74bc0c5",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "native_status": -1,
+        "diagnostics": [
+          "Line 44: The activation time is too early! (Violates 30 days constraint)"
+        ],
+        "stdout": "Line 44: The activation time is too early! (Violates 30 days constraint) \nExtra info:Line 44: The activation time is too early! (Violates 30 days constraint) \nScore:0\nStatus:-1\n****************************************************************************\n\nLine 44: The activation time is too early! (Violates 30 days constraint) \n\n",
+        "stderr": "",
+        "native_report": "Line 44: The activation time is too early! (Violates 30 days constraint) \n0\n-1\n",
+        "returncode": 255,
+        "validation_seconds": 0.2250119170000744
+      }
+    },
+    {
+      "case": "truncated_file",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "69669e142db3982c65aa89e3fc12a4017161e4475b9d2ddced6d4a6fb6b6c4be",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "COLUMNS at line 1299: Expected 11 columns, got 1"
+        ],
+        "errors": [
+          {
+            "code": "COLUMNS",
+            "line": 1299,
+            "message": "Expected 11 columns, got 1"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.025633792000007816
+      }
+    },
+    {
+      "case": "extra_trailing_record",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "5df5a1e51b626c506341278454f1fdb9607a9cef714a293ad014720b0c6b9f74",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "COLUMNS at line 1304: Expected asteroid ID, station ID and row count"
+        ],
+        "errors": [
+          {
+            "code": "COLUMNS",
+            "line": 1304,
+            "message": "Expected asteroid ID, station ID and row count"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.024589291999973284
+      }
+    },
+    {
+      "case": "duplicate_transfer",
+      "expected_status": "invalid",
+      "verdict": {
+        "artifact_sha256": "f1799c98eaa1062e0ccabf7cddc518edbf986226ffc450fbcd64ebb65d6725b9",
+        "score_unit": "points",
+        "problem_revision": "gtoc11-official-b1-v1",
+        "validator_kind": "official_binary_with_input_output_guards",
+        "validator_revision": "6beb6456ee3959034ef3510ea646edf1633d37cb1fd61e41687dee3d94b4eabb",
+        "adapter_revision": "a966f7264b993fa9cd88dacdf2b8b59ad134c603c76af54b85847f12bc4a3fcb",
+        "status": "invalid",
+        "score": null,
+        "diagnostics": [
+          "DUPLICATE_TRANSFER at line 1304: Asteroid 81885 is transferred more than once"
+        ],
+        "errors": [
+          {
+            "code": "DUPLICATE_TRANSFER",
+            "line": 1304,
+            "message": "Asteroid 81885 is transferred more than once"
+          }
+        ],
+        "stdout": "",
+        "stderr": "",
+        "validation_seconds": 0.02462037500004044
+      }
+    }
+  ]
+}

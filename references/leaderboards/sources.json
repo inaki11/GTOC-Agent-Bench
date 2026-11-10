@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "captured_at_utc": "2026-10-31T15:15:31Z",
+  "sources": {
+    "gtoc12/source-tsinghua-api.json": {
+      "url": "https://gtoc12.tsinghua.edu.cn/prod-api/solutions/getSolutionLeaderboard",
+      "captured_at_utc": "2026-10-31T15:15:31Z",
+      "sha256": "d1a740147b29bb4b7b384246bb4e65887f8ee5f5d5d6da30aa38590cf553edd0",
+      "bytes": 11997,
+      "capture_note": "HTTPS JSON API used by the official leaderboard. Direct response; 28 final entries."
+    },
+    "gtoc12/source-esa-table.txt": {
+      "url": "https://sophia.estec.esa.int/gtoc_portal/?page_id=1437",
+      "captured_at_utc": "2026-10-31T15:15:31Z",
+      "sha256": "919f19d017e5d00546611e7377f73c6a98046fa49257f0a3f5da1e009c6d5c96",
+      "bytes": 1057,
+      "capture_note": "Full table extracted by web search from the ESA GTOC portal; indexed page, not a direct HTTP snapshot. Cross-check against the live official API."
+    },
+    "gtoc13/source-jpl-table.txt": {
+      "url": "https://gtoc.jpl.net/gtoc13/leaderboard/",
+      "captured_at_utc": "2026-10-31T15:15:31Z",
+      "sha256": "9d6cc85d52e6bbcd9ce9c70475da72416f212c280709a9c56911796a514b107a",
+      "bytes": 5822,
+      "capture_note": "Full table extracted by web search from the official JPL page; indexed page reported crawled last month. Direct HTTP from the host was unavailable (DNS)."
+    },
+    "gtocx/source-jpl-leaderboard.html": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/gtocx/leaderboard/index.html",
+      "captured_at_utc": "2026-10-31T17:27:19Z",
+      "sha256": "68e7967b29f029893c344deb004a6ba9554688f94345fa52e11e2b1d8fab06a6",
+      "bytes": 14877,
+      "capture_note": "Direct HTTPS response from ESA archive of the original JPL website."
+    },
+    "gtocx/source-home.html": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/",
+      "captured_at_utc": "2026-10-31T17:27:19Z",
+      "sha256": "4185f6ae29d68e758bd81cbcbb93707bb6622ad704d9746825e1f962e7bd0885",
+      "bytes": 7851,
+      "capture_note": "Direct HTTPS response from ESA archive of the original JPL website."
+    },
+    "gtocx/source-bonus-clarification.txt": {
+      "url": "https://electra.estec.esa.int/jpl.gtocx/gtocx/discussion/33/index.html",
+      "captured_at_utc": "2026-10-31T17:27:19Z",
+      "sha256": "c7982cf7ae88ce455189d35b050177cb0036504c2b5be4687ca281fbc7a3300a",
+      "bytes": 3400,
+      "capture_note": "Direct HTTPS response from ESA archive of the original JPL website."
+    },
+    "gtoc11/source-esa-table.txt": {
+      "url": "https://sophia.estec.esa.int/gtoc_portal/?page_id=1444",
+      "captured_at_utc": "2026-11-03T13:45:28Z",
+      "sha256": "66cd87221b7c09455f609b4c6cbfe3fb4dc2bd8a32540ac3d2f031705cd137e8",
+      "bytes": 1951,
+      "capture_note": "Complete 25-team final table from indexed official ESA portal text. Direct retrieval failed (certificate mismatch / HTTP 503)."
+    },
+    "../gtoc11/sources/schedule-announcement.html": {
+      "url": "https://groups.google.com/g/gtoc_competition/c/VpCF-OOedC4",
+      "captured_at_utc": "2026-11-03T13:45:28Z",
+      "sha256": "e938cafa28d51d1470dc08e55605ef79e17a65a21c55a43e92ab62c1c5459bb3",
+      "bytes": 972345,
+      "capture_note": "Direct HTTPS capture of official GTOC11 schedule announcement. Submission opening 17 October 12 PM UTC, closing 7 November 12 PM UTC.",
+      "publication_redactions": {
+        "public_website_api_keys": 1,
+        "original_capture_sha256": "100b5154bbbda778c2a9b2315b8c0ed5f2181494f0d8c696e907664e3a19369f",
+        "reason": "Remove frontend API-key literals; announcement content and dates are unchanged."
+      }
+    }
+  },
+  "gtoc13_normalization": {
+    "competition_start_utc": "2025-10-20T17:00:00Z",
+    "submission_open_utc": "2025-10-24T17:00:00Z",
+    "competition_end_utc": "2025-11-17T18:00:00Z",
+    "timeline_source_url": "https://gtoc.jpl.net/",
+    "time_bonus_rule": "c = 1.13 for elapsed_days <= 7; c = 1.165 - 0.005 * elapsed_days otherwise",
+    "time_bonus_source_url": "https://gtoc.jpl.net/static/gtoc13/gtoc13_problem_statement.pdf",
+    "local_statement_path": "../../problems/gtoc13/documents/gtoc13_problem_statement.pdf",
+    "local_statement_sha256": "ec07a9c24075de6bdb99641456d02c2c7162a7d035bdb13b57fcc4b2b7c39369",
+    "timestamp_field": "Best Submission",
+    "timestamp_timezone": "UTC",
+    "timestamp_resolution_seconds": 60,
+    "published_score_resolution": 0.001,
+    "calendar_bonus_in_benchmark": 1,
+    "selection_policy": "Rescore only the best entry retained on the final official leaderboard; other submissions are not available here."
+  },
+  "gtocx_normalization": {
+    "submission_start_utc": "2019-05-21T20:00:00Z",
+    "submission_end_utc": "2019-06-12T20:00:00Z",
+    "time_bonus_rule": "B=1+((end-check_time)/(end-start))**4",
+    "displayed_timezone_offset_minutes_assumed": -300,
+    "timezone_note": "The static archive does not label row timezones. UTC-05:00 is inferred and cross-checked against the two early public final solutions with significant bonus (Jena and Citadel). Normalized timestamps remain estimates.",
+    "timestamp_resolution_seconds": 60,
+    "time_bonus_epoch_note": "The organizer says bonus used server checking time to the second, which can lag the displayed submission epoch.",
+    "calendar_bonus_in_benchmark": 1,
+    "selection_policy": "Rescore the same best submission retained for each team on the final leaderboard.",
+    "reference_checks_path": "../gtocx/reference-checks.json",
+    "reference_checks_sha256": "3b522f143a518aa5cf0a9323f60e05a288193d5ba19a318c698b351b0e397779",
+    "reference_manifest_path": "../gtocx/manifest.json",
+    "reference_manifest_sha256": "d4d953cb934898b9e12b0699c1a27614d70c9758082dde28ef8be52c25265d2a"
+  },
+  "gtoc11_normalization": {
+    "submission_open_utc": "2021-10-17T12:00:00Z",
+    "competition_end_utc": "2021-11-07T12:00:00Z",
+    "timeline_source_url": "https://groups.google.com/g/gtoc_competition/c/VpCF-OOedC4",
+    "time_bonus_rule": "B = 2 - sqrt(1 - ((end-submission)/(end-start))^3)",
+    "time_bonus_source_url": "https://sophia.estec.esa.int/gtoc_portal/wp-content/uploads/2021/12/gtoc11_problem_stmt.pdf",
+    "timestamp_resolution_seconds": 60,
+    "post_close_display_policy": "Keep published timestamps; clamp B to 1 after close for the approximate normalization only.",
+    "all_rows_method": "Approximate from displayed score and best-submission UTC. Exact team submissions are not identified."
+  }
+}

@@ -1,0 +1,66 @@
+GTOCX - 
+
+Discussions
+GTOC X
+10th Global Trajectory Optimisation Competition
+(archived version of original website at gtocx.jpl.nasa.gov)
+Toggle navigation
+Home
+About
+Competition
+May 21, 2019, 8 p.m. UTC
+June 12, 2019, 8 p.m. UTC
+Timeline
+The competition is over.
+The Problem
+Data
+Solution Format & Submission Details
+Teams
+Announcements
+Teams' Solutions
+Leaderboard
+Discussion
+Discussion
+Error in submission format
+JackieLiu
+May I ask what causes the following errors when submitting? My submission was only 12 lines , but the following error was reported on line 13. There's nothing in line 13.
+** -ERROR- ** :: could not read mothership/fastship ID and int2; line 13
+2019-06-05
+05:31
+Anastassios@JPL
+Blank lines are not permitted anywhere in the file (except that the header line can be blank).  The trailing blank lines were the cause of the error in your submission.
+2019-06-05
+11:42
+JackieLiu
+This problem has been solved. Thank you
+2019-06-05
+22:47
+NASA
+|
+CALTECH
+|
+PRIVACY
+|
+IMAGE POLICY
+|
+FAQ
+|
+FEEDBACK
+Site Manager:
+Anastassios Petropoulos
+CL#: 19-2147
+var _paq = _paq || [];
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="//sophia.estec.esa.int/piwik/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', 1]);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+jQuery(document).ready(function($) {
+    $(".link-row").click(function() {
+        window.document.location = $(this).data("href");
+    });
+});
