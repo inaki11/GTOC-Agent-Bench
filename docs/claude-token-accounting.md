@@ -72,3 +72,8 @@ y [contadores acumulados del stream](https://platform.claude.com/docs/en/build-w
 La regresión se comprueba con streams simulados, cierres incompletos, mensajes
 repetidos, reconciliaciones y el cliente oficial contra un proveedor local
 determinista, sin consumir cuota de modelos.
+
+En modo suscripción, el preflight verifica la versión y el hash del cliente
+oficial del host. El contenedor declara esa ubicación y no intenta ejecutar un
+segundo Claude sin uso: esa comprobación abortaba bajo emulación x86 en Spark.
+Los agentes que sí se ejecutan dentro del contenedor mantienen su verificación.

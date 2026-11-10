@@ -145,7 +145,17 @@ class Bridge:
             versions = {}
             expected = config["agent"]["version"]
             agent_id = config["agent"]["id"]
-            if agent_id in {"codex", "claude_code"}:
+            host_claude = (
+                agent_id == "claude_code"
+                and config.get("provider", {}).get("auth_method") == "claude_subscription"
+            )
+            if host_claude:
+                # Runner verifies the pinned official host binary before creating
+                # this container. No Claude executable is used inside it in this
+                # mode (and an unused x86 client may abort under ARM emulation).
+                actual = None
+                versions.update(claude_execution="host", claude_expected_version=expected)
+            elif agent_id in {"codex", "claude_code"}:
                 name = "codex" if agent_id == "codex" else "claude"
                 actual = subprocess.check_output([name, "--version"], timeout=60, text=True).strip()
                 versions[name] = actual
@@ -171,7 +181,7 @@ class Bridge:
                     timeout=30,
                 ).strip()
                 versions[agent_id] = actual
-            if expected not in actual.split():
+            if actual is not None and expected not in actual.split():
                 raise ValueError(f"Agent version mismatch: expected {expected}, got {actual}")
             if agent_id == "codex":
                 self.prepare_codex_model(config, codex_catalog, codex_catalog_source)

@@ -123,7 +123,10 @@ def test_container_always_enforces_cpu_ceiling(
         runner.pool.shutdown()
 
 
-@pytest.mark.parametrize("agent,executable", [("codex", "codex"), ("claude-code", "claude")])
+@pytest.mark.parametrize(
+    "agent,executable",
+    [("codex", "codex"), ("claude-code", "claude"), ("claude-subscription", None)],
+)
 def test_preflight_does_not_require_an_unselected_client(monkeypatch, agent, executable):
     import sys
 
@@ -153,7 +156,11 @@ def test_preflight_does_not_require_an_unselected_client(monkeypatch, agent, exe
     bridge.prepare(config)
     assert not bridge.stop.is_set()
     assert events[0][0] == "ready"
-    assert events[0][1]["versions"] == {executable: version}
+    assert events[0][1]["versions"] == (
+        {executable: version}
+        if executable
+        else {"claude_execution": "host", "claude_expected_version": version}
+    )
 
 
 def test_native_exit_zero_is_not_success():
